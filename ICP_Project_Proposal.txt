@@ -1,0 +1,15 @@
+Project Proposal for CPSC524 
+Gudbrand Tandberg 11/2016
+
+Title: Point Set Registration using ICP
+
+Goal: To write a working implementation of some variant of ICP for aligning two point-clouds using the libigl library. Many classic papers to help me along the way. 
+
+Extra: There are many variants of the algorithm, and many ways to extend a basic working implementation if time permits.
+  - store the meshes in k-d trees for faster runtime
+  - experiment with different loss-funtions/regularizers
+  - write a very tiny "paper" (log) commenting what I have done and summarizing and comparing results
+
+Secondary goal: to focus on writing "good" C++ code—follow the libigl style-guides and use UnitTests++
+
+Rough plan: have basic components working by end of November, work on extras/extensions until due date December 12th.

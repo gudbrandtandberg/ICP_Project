@@ -1,0 +1,12 @@
+19/11:
+- got libigl example project working after a while
+- tweaked example project to my needs; cmake + xcode working together smoothly
+- can load obj-mesh and launch viewer
+- collect informative sources on ICP-variants. find good test-case meshes.
+
+plan this weekend: set up skeleton of complete project, notable nice UI and
+nice code setup. Think about large scale program flow/design choices.
+
+plan this week: get *basic* icp-alignment of 3d shapes working on a few examples
+
+

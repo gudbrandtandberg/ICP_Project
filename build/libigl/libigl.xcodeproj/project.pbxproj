@@ -1,0 +1,1724 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              DDD008CFAFC34D90AD9D7110 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = E42E17880ADE4FA598066086 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            31720050F2D34487AEEA50BF /* CMake Rules */,
+                     );
+                     dependencies = (
+                            3A08F126D336444BA0AFC027 /* PBXTargetDependency */,
+                            91737C3AFF1A4E2C95CF4F88 /* PBXTargetDependency */,
+                            16AD308E593847FB8A7DBD2C /* PBXTargetDependency */,
+                            F29AE5846D2746D5B79F4B7D /* PBXTargetDependency */,
+                            A7C15D8389004D2D8343A306 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              775F0B932FD94780B0F5C81C /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 52EEE4D546B64D1EBA6D10EA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            B1105AADDD6743B5AFEE6818 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              D21E338F54704A52BD182CDE /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = BD3B7440CE864814AD5B8128 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            695DDCBAF46E4888B751EF9C /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            F1AC353E49294B53927B88C4 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+21972C559F9747B2A8539F9A /* /Users/gudbrand/libigl/external/nanogui/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F283CF949C2B42ADAA276ED9 /* /Users/gudbrand/libigl/external/nanogui/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+F3CCC144B45645E3B3261735 /* /Users/gudbrand/libigl/external/nanogui/resources/bin2c.c */ = {isa = PBXBuildFile; fileRef = 4D4255E0DD074D8395D3CF23 /* /Users/gudbrand/libigl/external/nanogui/resources/bin2c.c */; settings = { COMPILER_FLAGS = ""; }; };
+69618C5C626041E49F4C6088 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp */ = {isa = PBXBuildFile; fileRef = AED1F66D585E404A99B2BE05 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+9701DEFE401445E5B1D24389 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp.rule */ = {isa = PBXBuildFile; fileRef = FE08FAE1AF3041A9978F4DBE /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp.rule */; settings = { COMPILER_FLAGS = ""; }; };
+59D6F5F83BFF4788ACAEC2FD /* /Users/gudbrand/libigl/external/nanogui/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F283CF949C2B42ADAA276ED9 /* /Users/gudbrand/libigl/external/nanogui/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+5070356599794A2FABC30A0C /* /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src/nanovg.c */ = {isa = PBXBuildFile; fileRef = 44284A8EE2BD414A8C40FFE8 /* /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src/nanovg.c */; settings = { COMPILER_FLAGS = "-DNVG_BUILD "; }; };
+B9A529BAE37F4D58968A485C /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/button.h */ = {isa = PBXBuildFile; fileRef = 700F74C8E4AA49E699F5DE9C /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/button.h */; settings = { COMPILER_FLAGS = ""; }; };
+E14DDE9046E04536A854911E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/checkbox.h */ = {isa = PBXBuildFile; fileRef = 56A082E2CA524A56B8EDAEC8 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/checkbox.h */; settings = { COMPILER_FLAGS = ""; }; };
+4BA0047DD02242B69B248648 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorpicker.h */ = {isa = PBXBuildFile; fileRef = 78DAF5B147D04B9F92F534FB /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorpicker.h */; settings = { COMPILER_FLAGS = ""; }; };
+5154BA3F0B77439ABC70C0FE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorwheel.h */ = {isa = PBXBuildFile; fileRef = 898D07E846D84C89A18FF02F /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorwheel.h */; settings = { COMPILER_FLAGS = ""; }; };
+E4FB013A88394242939C6E3F /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/combobox.h */ = {isa = PBXBuildFile; fileRef = E3AFAEF8E2184BDCAA88928E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/combobox.h */; settings = { COMPILER_FLAGS = ""; }; };
+00B29CC5BFDC431D82B05613 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/common.h */ = {isa = PBXBuildFile; fileRef = 14A4C67AAB8C41D981CA0677 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/common.h */; settings = { COMPILER_FLAGS = ""; }; };
+C30836C090204541B9B3E3A6 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/formhelper.h */ = {isa = PBXBuildFile; fileRef = BA8074E5AAC74FD6A96C6309 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/formhelper.h */; settings = { COMPILER_FLAGS = ""; }; };
+32A0461983B94E15A7E96B32 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/glutil.h */ = {isa = PBXBuildFile; fileRef = E604A4ADA8654E5C89C3D126 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/glutil.h */; settings = { COMPILER_FLAGS = ""; }; };
+484272A0A6464B1C80C2DAFD /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/graph.h */ = {isa = PBXBuildFile; fileRef = 5DFE37E8E9E34737B4F41469 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/graph.h */; settings = { COMPILER_FLAGS = ""; }; };
+1C53508F1A9B45E4A9753431 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imagepanel.h */ = {isa = PBXBuildFile; fileRef = 0B5C31E9AFBC43F4A2E71A57 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imagepanel.h */; settings = { COMPILER_FLAGS = ""; }; };
+4CA95AFDE1BB4B8CBC56CA5A /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imageview.h */ = {isa = PBXBuildFile; fileRef = DB0948FEFBAE4603B89B0583 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imageview.h */; settings = { COMPILER_FLAGS = ""; }; };
+60A8AF99044A47A28E3BEBFE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/label.h */ = {isa = PBXBuildFile; fileRef = 7EE4C44036394F73A3296B80 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/label.h */; settings = { COMPILER_FLAGS = ""; }; };
+EAB984CFFC1A48428C1C589B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/layout.h */ = {isa = PBXBuildFile; fileRef = 69E92D88536E40BD922C016E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/layout.h */; settings = { COMPILER_FLAGS = ""; }; };
+58E3DF0208514EDF8629C3C4 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/messagedialog.h */ = {isa = PBXBuildFile; fileRef = B118E1ECF38E4A3299E028DA /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/messagedialog.h */; settings = { COMPILER_FLAGS = ""; }; };
+04A847FA657D49EB9126F1DE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/nanogui.h */ = {isa = PBXBuildFile; fileRef = A3CEF07B38094920B760C72B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/nanogui.h */; settings = { COMPILER_FLAGS = ""; }; };
+959DC65BFF4749F79A24BEE8 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/opengl.h */ = {isa = PBXBuildFile; fileRef = 71E943FB9DB74D0A96E4AB3F /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/opengl.h */; settings = { COMPILER_FLAGS = ""; }; };
+7075B852C7E24243B5BFF834 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popup.h */ = {isa = PBXBuildFile; fileRef = D0D66EEE4F044BF58B8CA869 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popup.h */; settings = { COMPILER_FLAGS = ""; }; };
+DEDB4AFDF8814B63A328734E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popupbutton.h */ = {isa = PBXBuildFile; fileRef = 92F62E5D688B47EEA95E5873 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popupbutton.h */; settings = { COMPILER_FLAGS = ""; }; };
+4D23A2E641F344EDADFD375D /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/progressbar.h */ = {isa = PBXBuildFile; fileRef = 78610464E93240FE9A44030A /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/progressbar.h */; settings = { COMPILER_FLAGS = ""; }; };
+0D73562BE44543C9BEF65352 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/screen.h */ = {isa = PBXBuildFile; fileRef = 8F04E4A9034D47228FF5B6F2 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/screen.h */; settings = { COMPILER_FLAGS = ""; }; };
+A3A436BFF9F94203BC909E2E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/core.h */ = {isa = PBXBuildFile; fileRef = D307D4920A7A49E981221D9E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/core.h */; settings = { COMPILER_FLAGS = ""; }; };
+491C4E04A0D04CB8ABB83D22 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/opengl.h */ = {isa = PBXBuildFile; fileRef = 9F2C7395AE224DEB8774AAF7 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/opengl.h */; settings = { COMPILER_FLAGS = ""; }; };
+D41833099FDB4669AAE8DADF /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/sparse.h */ = {isa = PBXBuildFile; fileRef = 860038A02BCC4429BFBF2866 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/sparse.h */; settings = { COMPILER_FLAGS = ""; }; };
+2A592721BFF64C9689384142 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/slider.h */ = {isa = PBXBuildFile; fileRef = D55ACCD243E84A24A55322FC /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/slider.h */; settings = { COMPILER_FLAGS = ""; }; };
+7F39F88467EC4E09B1DA42DC /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/stackedwidget.h */ = {isa = PBXBuildFile; fileRef = 20D2D7D9D8494FFB819DF8BC /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/stackedwidget.h */; settings = { COMPILER_FLAGS = ""; }; };
+08735C4CABC44B67958937B7 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabheader.h */ = {isa = PBXBuildFile; fileRef = C1CEB1A7B9504C85B775554B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabheader.h */; settings = { COMPILER_FLAGS = ""; }; };
+29AD168C2CFE47FAAC04DC36 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabwidget.h */ = {isa = PBXBuildFile; fileRef = 09260F1A0C5A4CEB8C61E255 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabwidget.h */; settings = { COMPILER_FLAGS = ""; }; };
+F815F31878FD4F688F20EE00 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/textbox.h */ = {isa = PBXBuildFile; fileRef = E3F795C9BA3F4A06963FDDCE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/textbox.h */; settings = { COMPILER_FLAGS = ""; }; };
+C5A9AE22AA844CDBB9393CC7 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/theme.h */ = {isa = PBXBuildFile; fileRef = 720FB728F7AB46C1AB67B28B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/theme.h */; settings = { COMPILER_FLAGS = ""; }; };
+BC627662C31E46F28C1DDD81 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/toolbutton.h */ = {isa = PBXBuildFile; fileRef = 02BB3427C7324C9A820389FE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/toolbutton.h */; settings = { COMPILER_FLAGS = ""; }; };
+1AE682BD30314B6683C5E434 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/vscrollpanel.h */ = {isa = PBXBuildFile; fileRef = 11552A5AADA24CB19812F938 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/vscrollpanel.h */; settings = { COMPILER_FLAGS = ""; }; };
+0F09CFC335D245C19D2310CA /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/widget.h */ = {isa = PBXBuildFile; fileRef = FEA20FF37449459E95695B39 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/widget.h */; settings = { COMPILER_FLAGS = ""; }; };
+8A0864DB169B473FBC85FD7D /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/window.h */ = {isa = PBXBuildFile; fileRef = B447875C95D44162BF008BD8 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/window.h */; settings = { COMPILER_FLAGS = ""; }; };
+C5204D422C834BEBB3CE5E38 /* /Users/gudbrand/libigl/external/nanogui/src/button.cpp */ = {isa = PBXBuildFile; fileRef = F5F3D684CE0B4F0C93E318BA /* /Users/gudbrand/libigl/external/nanogui/src/button.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+0AC548A26B0644A4BCC279CE /* /Users/gudbrand/libigl/external/nanogui/src/checkbox.cpp */ = {isa = PBXBuildFile; fileRef = 1E95EEBCA62B450E8AA8A384 /* /Users/gudbrand/libigl/external/nanogui/src/checkbox.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+764DF3B8E3E14690A792C991 /* /Users/gudbrand/libigl/external/nanogui/src/colorpicker.cpp */ = {isa = PBXBuildFile; fileRef = 9A7E11A686B7420EB7036462 /* /Users/gudbrand/libigl/external/nanogui/src/colorpicker.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+E1035249EEAF4B54AFC8C769 /* /Users/gudbrand/libigl/external/nanogui/src/colorwheel.cpp */ = {isa = PBXBuildFile; fileRef = 7BDB0225B532467781217460 /* /Users/gudbrand/libigl/external/nanogui/src/colorwheel.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+1DE92E133CD04F5BBF4E4951 /* /Users/gudbrand/libigl/external/nanogui/src/combobox.cpp */ = {isa = PBXBuildFile; fileRef = AE8985285BFA493D9A083F5E /* /Users/gudbrand/libigl/external/nanogui/src/combobox.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A1017663055847D484629A3E /* /Users/gudbrand/libigl/external/nanogui/src/common.cpp */ = {isa = PBXBuildFile; fileRef = 7D9D645CC7EF4722AF1DA991 /* /Users/gudbrand/libigl/external/nanogui/src/common.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+06893EF2D13945E2906A3E4F /* /Users/gudbrand/libigl/external/nanogui/src/darwin.mm */ = {isa = PBXBuildFile; fileRef = D308A1CFF0944F7FA916AE3F /* /Users/gudbrand/libigl/external/nanogui/src/darwin.mm */; settings = { COMPILER_FLAGS = ""; }; };
+F3F9D03CA56340C6857BBC32 /* /Users/gudbrand/libigl/external/nanogui/src/glutil.cpp */ = {isa = PBXBuildFile; fileRef = 6647083841164395857069FD /* /Users/gudbrand/libigl/external/nanogui/src/glutil.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+963FB40208234614A6754F90 /* /Users/gudbrand/libigl/external/nanogui/src/graph.cpp */ = {isa = PBXBuildFile; fileRef = F77DD26388A64FEE9AC1DB4F /* /Users/gudbrand/libigl/external/nanogui/src/graph.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+D41C6B0CCAEA45AF991C3940 /* /Users/gudbrand/libigl/external/nanogui/src/imagepanel.cpp */ = {isa = PBXBuildFile; fileRef = 560FBC71492F41BDAC28B648 /* /Users/gudbrand/libigl/external/nanogui/src/imagepanel.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A653BFF635294781BEAF9E7E /* /Users/gudbrand/libigl/external/nanogui/src/imageview.cpp */ = {isa = PBXBuildFile; fileRef = C21F67E812BB4F62A269011B /* /Users/gudbrand/libigl/external/nanogui/src/imageview.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+72C2D6CA6E1D4C79B5000CFF /* /Users/gudbrand/libigl/external/nanogui/src/label.cpp */ = {isa = PBXBuildFile; fileRef = 6372FA31AE174CA98D8B4B9E /* /Users/gudbrand/libigl/external/nanogui/src/label.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+ADC04B5B77D14FCB83984284 /* /Users/gudbrand/libigl/external/nanogui/src/layout.cpp */ = {isa = PBXBuildFile; fileRef = 89016171A67A4533B28FCE8A /* /Users/gudbrand/libigl/external/nanogui/src/layout.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+37A6E4D85C8A449F861313CF /* /Users/gudbrand/libigl/external/nanogui/src/messagedialog.cpp */ = {isa = PBXBuildFile; fileRef = 2568221F43DF43C4B4915F0D /* /Users/gudbrand/libigl/external/nanogui/src/messagedialog.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+C5CFEE71A29349E7A9DAADBE /* /Users/gudbrand/libigl/external/nanogui/src/popup.cpp */ = {isa = PBXBuildFile; fileRef = C11D8606CFD149D69EAD9B7C /* /Users/gudbrand/libigl/external/nanogui/src/popup.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+88411DE22E7E4052ABCB05A6 /* /Users/gudbrand/libigl/external/nanogui/src/popupbutton.cpp */ = {isa = PBXBuildFile; fileRef = 17D09983D7114D6C8929FCF9 /* /Users/gudbrand/libigl/external/nanogui/src/popupbutton.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+61E3A4C7E52B4E41BFD17AD3 /* /Users/gudbrand/libigl/external/nanogui/src/progressbar.cpp */ = {isa = PBXBuildFile; fileRef = 2C6F79861CC14D9E9F000E53 /* /Users/gudbrand/libigl/external/nanogui/src/progressbar.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+3544A2F6BB294575B6369EB0 /* /Users/gudbrand/libigl/external/nanogui/src/screen.cpp */ = {isa = PBXBuildFile; fileRef = 2C65ECCD9D5442F8A05191BF /* /Users/gudbrand/libigl/external/nanogui/src/screen.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+188CB594A5884DECBD27384F /* /Users/gudbrand/libigl/external/nanogui/src/serializer.cpp */ = {isa = PBXBuildFile; fileRef = D871559285DB4BCE83A908E9 /* /Users/gudbrand/libigl/external/nanogui/src/serializer.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+FF826EF026EF4661931E7514 /* /Users/gudbrand/libigl/external/nanogui/src/slider.cpp */ = {isa = PBXBuildFile; fileRef = B09479C98F84456FB7901F5D /* /Users/gudbrand/libigl/external/nanogui/src/slider.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A0EEAF1A08EA4B22AB8E801F /* /Users/gudbrand/libigl/external/nanogui/src/stackedwidget.cpp */ = {isa = PBXBuildFile; fileRef = 6A58C2D42861497DACEC4809 /* /Users/gudbrand/libigl/external/nanogui/src/stackedwidget.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+2BBDA5FADBEA4DA487765955 /* /Users/gudbrand/libigl/external/nanogui/src/tabheader.cpp */ = {isa = PBXBuildFile; fileRef = 5532324FF55942919CEDD1CD /* /Users/gudbrand/libigl/external/nanogui/src/tabheader.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+75B9887ACBF04F1FAE8004AC /* /Users/gudbrand/libigl/external/nanogui/src/tabwidget.cpp */ = {isa = PBXBuildFile; fileRef = BC7C3334B520408F81B19CDA /* /Users/gudbrand/libigl/external/nanogui/src/tabwidget.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+78D6C403B2BF42C2B1CF50EC /* /Users/gudbrand/libigl/external/nanogui/src/textbox.cpp */ = {isa = PBXBuildFile; fileRef = C7207841110449B5956955EE /* /Users/gudbrand/libigl/external/nanogui/src/textbox.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+F7866D0F40484B809DF1392C /* /Users/gudbrand/libigl/external/nanogui/src/theme.cpp */ = {isa = PBXBuildFile; fileRef = 17D48DF1C9B64DDD945CD792 /* /Users/gudbrand/libigl/external/nanogui/src/theme.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+95A4BA6004C64543A2B6EA05 /* /Users/gudbrand/libigl/external/nanogui/src/vscrollpanel.cpp */ = {isa = PBXBuildFile; fileRef = 245E41F9FAEE4BB8941968FD /* /Users/gudbrand/libigl/external/nanogui/src/vscrollpanel.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+C8169594AA9A41A9887B662B /* /Users/gudbrand/libigl/external/nanogui/src/widget.cpp */ = {isa = PBXBuildFile; fileRef = 071C5DCA6D784E5E80C14412 /* /Users/gudbrand/libigl/external/nanogui/src/widget.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+57E54223C62E49A9BFB43287 /* /Users/gudbrand/libigl/external/nanogui/src/window.cpp */ = {isa = PBXBuildFile; fileRef = 584533D84F6E4BDF941784AD /* /Users/gudbrand/libigl/external/nanogui/src/window.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+6EDF6242E16D40A29DE8A111 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = AC17164778984CF99AFAE1D4 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+CFB4678AF75648DC9A712F28 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 5E21304BFB8D4CA8A8735992 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/glfw_config.h */; settings = { COMPILER_FLAGS = ""; }; };
+A846DF27A00640E98063E8BB /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 2DA74BE7248F405A976553CA /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3.h */; settings = { COMPILER_FLAGS = ""; }; };
+CFF012A999924B0687FF73AB /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 327699096D704B1587D3DA50 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3native.h */; settings = { COMPILER_FLAGS = ""; }; };
+9F1B06A3AC9A42BAA4EDF7F6 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = AC17164778984CF99AFAE1D4 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+448C62D1ECC347DDA90C8805 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 0AE96311B20C4CDBB6B4468B /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_init.m */; settings = { COMPILER_FLAGS = ""; }; };
+700E8ECF23D64F478B5F06BF /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = ABBE4B20C7F042289C2FABA2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.h */; settings = { COMPILER_FLAGS = ""; }; };
+DC178B985F134F108071715C /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = E9C5118F98364AC6852C78DD /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.m */; settings = { COMPILER_FLAGS = ""; }; };
+79C8DECB0D5D4FB9A7D28205 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 9A529515CC784879BFC69B14 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_monitor.m */; settings = { COMPILER_FLAGS = ""; }; };
+8796576350424D0C859D3EEE /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 8DAEF1B3A36C494D97E96B13 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_platform.h */; settings = { COMPILER_FLAGS = ""; }; };
+3F148DD46F674D1FB3D07F67 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 2A09E3CCD496424DBEDBB5BB /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_time.c */; settings = { COMPILER_FLAGS = ""; }; };
+78ACEB4E0A494BA791252A11 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = B6E2F80034404EEB82FDD779 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_window.m */; settings = { COMPILER_FLAGS = ""; }; };
+57544E7A9FD849A190C6F53B /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 97C754BD26DB4A83A42CD592 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/context.c */; settings = { COMPILER_FLAGS = ""; }; };
+AC81DB1F4F3D40198925DD6B /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = E974258C93454FD6AF93F8F2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/init.c */; settings = { COMPILER_FLAGS = ""; }; };
+34CC199C7AD44816A68D8CC2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 11F43E7024FB433787C4D37F /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/input.c */; settings = { COMPILER_FLAGS = ""; }; };
+D8A4FD35305B4A908CCCC868 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = C6D37165B5894D6EB883CACE /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/internal.h */; settings = { COMPILER_FLAGS = ""; }; };
+A7DE87591F744729B4A32365 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = FC303CDE88D8438CAF524E2A /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/monitor.c */; settings = { COMPILER_FLAGS = ""; }; };
+AEE9E80CFDD24EF98816A863 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 3B612DE4D9C24FFA80F89EE7 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.h */; settings = { COMPILER_FLAGS = ""; }; };
+5F96D619941D488BBC66FE98 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = E6804141F43E4B49B793134E /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.m */; settings = { COMPILER_FLAGS = ""; }; };
+49C4C11C142E48E5BFC35473 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 440A31038B294F6F9D3C6A6E /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.c */; settings = { COMPILER_FLAGS = ""; }; };
+F0DFB336CE704CE489B489DC /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = 5CB97DA216524924B0554A62 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.h */; settings = { COMPILER_FLAGS = ""; }; };
+CA5C6216BCBB47BA8B9D9278 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 1C8FD8A9F9904E288B05294A /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/vulkan.c */; settings = { COMPILER_FLAGS = ""; }; };
+9EDFD57FDE844EACB9BB57CD /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = B0E56544AC784924A07E84C6 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/window.c */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              F312F2C232244CA0AE872DE1 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              FB4D0AECEF034978A7FFD904 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              6ECE9C0BB61C4A32B4AA14B8 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+              9921E3DB93AA49819A1AC123 /* MinSizeRel */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = MinSizeRel;
+              };
+              46C52376670E45CF8E915776 /* RelWithDebInfo */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              8DE3C158778E44968C77C0AC /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = F37752D073274C45A31A7604;
+                     remoteInfo = bin2c;
+              };
+              480F6D650CCC4FBB8843DCAB /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 775F0B932FD94780B0F5C81C;
+                     remoteInfo = ZERO_CHECK;
+              };
+              924F71BA5E074456B50ED56B /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7BA2EE51BB36436FB218E67F;
+                     remoteInfo = glfw_objects;
+              };
+              B5E1D3694408433798C212C0 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 543223C7E20E4FE1884BA8BC;
+                     remoteInfo = glfw;
+              };
+              C87B5D1EC25A49E59A1C6225 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 034E3B45AB654B7FBCC7EF16;
+                     remoteInfo = nanogui;
+              };
+              C8546372FDFA424FA982BC45 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DDD008CFAFC34D90AD9D7110;
+                     remoteInfo = ALL_BUILD;
+              };
+              03272AE972FC4F379C8F501D /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = F37752D073274C45A31A7604;
+                     remoteInfo = bin2c;
+              };
+              07473B72954445E9B7933918 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7BA2EE51BB36436FB218E67F;
+                     remoteInfo = glfw_objects;
+              };
+              E05D4E8900F946B6B6A6E35E /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 775F0B932FD94780B0F5C81C;
+                     remoteInfo = ZERO_CHECK;
+              };
+              944E9DFC0FE7434AA3422433 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7BA2EE51BB36436FB218E67F;
+                     remoteInfo = glfw_objects;
+              };
+              5FC4050B5CF740D9B60AFCE2 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = E805BC37E7D7449786EB06C4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 775F0B932FD94780B0F5C81C;
+                     remoteInfo = ZERO_CHECK;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+9B132AB4922C4C3FBF59AA84 /* /Users/gudbrand/libigl/shared/cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+F283CF949C2B42ADAA276ED9 /* /Users/gudbrand/libigl/external/nanogui/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "../../external/nanogui/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+4D4255E0DD074D8395D3CF23 /* /Users/gudbrand/libigl/external/nanogui/resources/bin2c.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "bin2c.c"; path = "../../external/nanogui/resources/bin2c.c"; sourceTree = SOURCE_ROOT; };
+B37CE5D4645C4FFCA1A7E48E /* bin2c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = bin2c; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+AED1F66D585E404A99B2BE05 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "nanogui_resources.cpp"; path = "../../../Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp"; sourceTree = SOURCE_ROOT; };
+FE08FAE1AF3041A9978F4DBE /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "nanogui_resources.cpp.rule"; path = "../../../Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp.rule"; sourceTree = SOURCE_ROOT; };
+44284A8EE2BD414A8C40FFE8 /* /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src/nanovg.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "nanovg.c"; path = "../../external/nanogui/ext/nanovg/src/nanovg.c"; sourceTree = SOURCE_ROOT; };
+700F74C8E4AA49E699F5DE9C /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/button.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "button.h"; path = "../../external/nanogui/include/nanogui/button.h"; sourceTree = SOURCE_ROOT; };
+56A082E2CA524A56B8EDAEC8 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/checkbox.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "checkbox.h"; path = "../../external/nanogui/include/nanogui/checkbox.h"; sourceTree = SOURCE_ROOT; };
+78DAF5B147D04B9F92F534FB /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorpicker.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "colorpicker.h"; path = "../../external/nanogui/include/nanogui/colorpicker.h"; sourceTree = SOURCE_ROOT; };
+898D07E846D84C89A18FF02F /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorwheel.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "colorwheel.h"; path = "../../external/nanogui/include/nanogui/colorwheel.h"; sourceTree = SOURCE_ROOT; };
+E3AFAEF8E2184BDCAA88928E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/combobox.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "combobox.h"; path = "../../external/nanogui/include/nanogui/combobox.h"; sourceTree = SOURCE_ROOT; };
+14A4C67AAB8C41D981CA0677 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/common.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "common.h"; path = "../../external/nanogui/include/nanogui/common.h"; sourceTree = SOURCE_ROOT; };
+BA8074E5AAC74FD6A96C6309 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/formhelper.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "formhelper.h"; path = "../../external/nanogui/include/nanogui/formhelper.h"; sourceTree = SOURCE_ROOT; };
+E604A4ADA8654E5C89C3D126 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/glutil.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "glutil.h"; path = "../../external/nanogui/include/nanogui/glutil.h"; sourceTree = SOURCE_ROOT; };
+5DFE37E8E9E34737B4F41469 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/graph.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "graph.h"; path = "../../external/nanogui/include/nanogui/graph.h"; sourceTree = SOURCE_ROOT; };
+0B5C31E9AFBC43F4A2E71A57 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imagepanel.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "imagepanel.h"; path = "../../external/nanogui/include/nanogui/imagepanel.h"; sourceTree = SOURCE_ROOT; };
+DB0948FEFBAE4603B89B0583 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imageview.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "imageview.h"; path = "../../external/nanogui/include/nanogui/imageview.h"; sourceTree = SOURCE_ROOT; };
+7EE4C44036394F73A3296B80 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/label.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "label.h"; path = "../../external/nanogui/include/nanogui/label.h"; sourceTree = SOURCE_ROOT; };
+69E92D88536E40BD922C016E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/layout.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "layout.h"; path = "../../external/nanogui/include/nanogui/layout.h"; sourceTree = SOURCE_ROOT; };
+B118E1ECF38E4A3299E028DA /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/messagedialog.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "messagedialog.h"; path = "../../external/nanogui/include/nanogui/messagedialog.h"; sourceTree = SOURCE_ROOT; };
+A3CEF07B38094920B760C72B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/nanogui.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "nanogui.h"; path = "../../external/nanogui/include/nanogui/nanogui.h"; sourceTree = SOURCE_ROOT; };
+71E943FB9DB74D0A96E4AB3F /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/opengl.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "opengl.h"; path = "../../external/nanogui/include/nanogui/opengl.h"; sourceTree = SOURCE_ROOT; };
+D0D66EEE4F044BF58B8CA869 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popup.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "popup.h"; path = "../../external/nanogui/include/nanogui/popup.h"; sourceTree = SOURCE_ROOT; };
+92F62E5D688B47EEA95E5873 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popupbutton.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "popupbutton.h"; path = "../../external/nanogui/include/nanogui/popupbutton.h"; sourceTree = SOURCE_ROOT; };
+78610464E93240FE9A44030A /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/progressbar.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "progressbar.h"; path = "../../external/nanogui/include/nanogui/progressbar.h"; sourceTree = SOURCE_ROOT; };
+8F04E4A9034D47228FF5B6F2 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/screen.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "screen.h"; path = "../../external/nanogui/include/nanogui/screen.h"; sourceTree = SOURCE_ROOT; };
+D307D4920A7A49E981221D9E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/core.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "core.h"; path = "../../external/nanogui/include/nanogui/serializer/core.h"; sourceTree = SOURCE_ROOT; };
+9F2C7395AE224DEB8774AAF7 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/opengl.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "opengl.h"; path = "../../external/nanogui/include/nanogui/serializer/opengl.h"; sourceTree = SOURCE_ROOT; };
+860038A02BCC4429BFBF2866 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/sparse.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "sparse.h"; path = "../../external/nanogui/include/nanogui/serializer/sparse.h"; sourceTree = SOURCE_ROOT; };
+D55ACCD243E84A24A55322FC /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/slider.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "slider.h"; path = "../../external/nanogui/include/nanogui/slider.h"; sourceTree = SOURCE_ROOT; };
+20D2D7D9D8494FFB819DF8BC /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/stackedwidget.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "stackedwidget.h"; path = "../../external/nanogui/include/nanogui/stackedwidget.h"; sourceTree = SOURCE_ROOT; };
+C1CEB1A7B9504C85B775554B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabheader.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "tabheader.h"; path = "../../external/nanogui/include/nanogui/tabheader.h"; sourceTree = SOURCE_ROOT; };
+09260F1A0C5A4CEB8C61E255 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabwidget.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "tabwidget.h"; path = "../../external/nanogui/include/nanogui/tabwidget.h"; sourceTree = SOURCE_ROOT; };
+E3F795C9BA3F4A06963FDDCE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/textbox.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "textbox.h"; path = "../../external/nanogui/include/nanogui/textbox.h"; sourceTree = SOURCE_ROOT; };
+720FB728F7AB46C1AB67B28B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/theme.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "theme.h"; path = "../../external/nanogui/include/nanogui/theme.h"; sourceTree = SOURCE_ROOT; };
+02BB3427C7324C9A820389FE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/toolbutton.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "toolbutton.h"; path = "../../external/nanogui/include/nanogui/toolbutton.h"; sourceTree = SOURCE_ROOT; };
+11552A5AADA24CB19812F938 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/vscrollpanel.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "vscrollpanel.h"; path = "../../external/nanogui/include/nanogui/vscrollpanel.h"; sourceTree = SOURCE_ROOT; };
+FEA20FF37449459E95695B39 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/widget.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "widget.h"; path = "../../external/nanogui/include/nanogui/widget.h"; sourceTree = SOURCE_ROOT; };
+B447875C95D44162BF008BD8 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/window.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "window.h"; path = "../../external/nanogui/include/nanogui/window.h"; sourceTree = SOURCE_ROOT; };
+F5F3D684CE0B4F0C93E318BA /* /Users/gudbrand/libigl/external/nanogui/src/button.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "button.cpp"; path = "../../external/nanogui/src/button.cpp"; sourceTree = SOURCE_ROOT; };
+1E95EEBCA62B450E8AA8A384 /* /Users/gudbrand/libigl/external/nanogui/src/checkbox.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "checkbox.cpp"; path = "../../external/nanogui/src/checkbox.cpp"; sourceTree = SOURCE_ROOT; };
+9A7E11A686B7420EB7036462 /* /Users/gudbrand/libigl/external/nanogui/src/colorpicker.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "colorpicker.cpp"; path = "../../external/nanogui/src/colorpicker.cpp"; sourceTree = SOURCE_ROOT; };
+7BDB0225B532467781217460 /* /Users/gudbrand/libigl/external/nanogui/src/colorwheel.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "colorwheel.cpp"; path = "../../external/nanogui/src/colorwheel.cpp"; sourceTree = SOURCE_ROOT; };
+AE8985285BFA493D9A083F5E /* /Users/gudbrand/libigl/external/nanogui/src/combobox.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "combobox.cpp"; path = "../../external/nanogui/src/combobox.cpp"; sourceTree = SOURCE_ROOT; };
+7D9D645CC7EF4722AF1DA991 /* /Users/gudbrand/libigl/external/nanogui/src/common.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "common.cpp"; path = "../../external/nanogui/src/common.cpp"; sourceTree = SOURCE_ROOT; };
+D308A1CFF0944F7FA916AE3F /* /Users/gudbrand/libigl/external/nanogui/src/darwin.mm */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.objcpp"; fileEncoding = 4; name = "darwin.mm"; path = "../../external/nanogui/src/darwin.mm"; sourceTree = SOURCE_ROOT; };
+6647083841164395857069FD /* /Users/gudbrand/libigl/external/nanogui/src/glutil.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "glutil.cpp"; path = "../../external/nanogui/src/glutil.cpp"; sourceTree = SOURCE_ROOT; };
+F77DD26388A64FEE9AC1DB4F /* /Users/gudbrand/libigl/external/nanogui/src/graph.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "graph.cpp"; path = "../../external/nanogui/src/graph.cpp"; sourceTree = SOURCE_ROOT; };
+560FBC71492F41BDAC28B648 /* /Users/gudbrand/libigl/external/nanogui/src/imagepanel.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "imagepanel.cpp"; path = "../../external/nanogui/src/imagepanel.cpp"; sourceTree = SOURCE_ROOT; };
+C21F67E812BB4F62A269011B /* /Users/gudbrand/libigl/external/nanogui/src/imageview.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "imageview.cpp"; path = "../../external/nanogui/src/imageview.cpp"; sourceTree = SOURCE_ROOT; };
+6372FA31AE174CA98D8B4B9E /* /Users/gudbrand/libigl/external/nanogui/src/label.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "label.cpp"; path = "../../external/nanogui/src/label.cpp"; sourceTree = SOURCE_ROOT; };
+89016171A67A4533B28FCE8A /* /Users/gudbrand/libigl/external/nanogui/src/layout.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "layout.cpp"; path = "../../external/nanogui/src/layout.cpp"; sourceTree = SOURCE_ROOT; };
+2568221F43DF43C4B4915F0D /* /Users/gudbrand/libigl/external/nanogui/src/messagedialog.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "messagedialog.cpp"; path = "../../external/nanogui/src/messagedialog.cpp"; sourceTree = SOURCE_ROOT; };
+C11D8606CFD149D69EAD9B7C /* /Users/gudbrand/libigl/external/nanogui/src/popup.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "popup.cpp"; path = "../../external/nanogui/src/popup.cpp"; sourceTree = SOURCE_ROOT; };
+17D09983D7114D6C8929FCF9 /* /Users/gudbrand/libigl/external/nanogui/src/popupbutton.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "popupbutton.cpp"; path = "../../external/nanogui/src/popupbutton.cpp"; sourceTree = SOURCE_ROOT; };
+2C6F79861CC14D9E9F000E53 /* /Users/gudbrand/libigl/external/nanogui/src/progressbar.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "progressbar.cpp"; path = "../../external/nanogui/src/progressbar.cpp"; sourceTree = SOURCE_ROOT; };
+2C65ECCD9D5442F8A05191BF /* /Users/gudbrand/libigl/external/nanogui/src/screen.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "screen.cpp"; path = "../../external/nanogui/src/screen.cpp"; sourceTree = SOURCE_ROOT; };
+D871559285DB4BCE83A908E9 /* /Users/gudbrand/libigl/external/nanogui/src/serializer.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "serializer.cpp"; path = "../../external/nanogui/src/serializer.cpp"; sourceTree = SOURCE_ROOT; };
+B09479C98F84456FB7901F5D /* /Users/gudbrand/libigl/external/nanogui/src/slider.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "slider.cpp"; path = "../../external/nanogui/src/slider.cpp"; sourceTree = SOURCE_ROOT; };
+6A58C2D42861497DACEC4809 /* /Users/gudbrand/libigl/external/nanogui/src/stackedwidget.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "stackedwidget.cpp"; path = "../../external/nanogui/src/stackedwidget.cpp"; sourceTree = SOURCE_ROOT; };
+5532324FF55942919CEDD1CD /* /Users/gudbrand/libigl/external/nanogui/src/tabheader.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "tabheader.cpp"; path = "../../external/nanogui/src/tabheader.cpp"; sourceTree = SOURCE_ROOT; };
+BC7C3334B520408F81B19CDA /* /Users/gudbrand/libigl/external/nanogui/src/tabwidget.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "tabwidget.cpp"; path = "../../external/nanogui/src/tabwidget.cpp"; sourceTree = SOURCE_ROOT; };
+C7207841110449B5956955EE /* /Users/gudbrand/libigl/external/nanogui/src/textbox.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "textbox.cpp"; path = "../../external/nanogui/src/textbox.cpp"; sourceTree = SOURCE_ROOT; };
+17D48DF1C9B64DDD945CD792 /* /Users/gudbrand/libigl/external/nanogui/src/theme.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "theme.cpp"; path = "../../external/nanogui/src/theme.cpp"; sourceTree = SOURCE_ROOT; };
+245E41F9FAEE4BB8941968FD /* /Users/gudbrand/libigl/external/nanogui/src/vscrollpanel.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "vscrollpanel.cpp"; path = "../../external/nanogui/src/vscrollpanel.cpp"; sourceTree = SOURCE_ROOT; };
+071C5DCA6D784E5E80C14412 /* /Users/gudbrand/libigl/external/nanogui/src/widget.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "widget.cpp"; path = "../../external/nanogui/src/widget.cpp"; sourceTree = SOURCE_ROOT; };
+584533D84F6E4BDF941784AD /* /Users/gudbrand/libigl/external/nanogui/src/window.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "window.cpp"; path = "../../external/nanogui/src/window.cpp"; sourceTree = SOURCE_ROOT; };
+C65CD921CA1E4AEDA1E9F84B /* nanogui */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libnanogui.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+AC17164778984CF99AFAE1D4 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "../../external/nanogui/ext/glfw/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+6E9057AF3BAB4BE29260FEA6 /* glfw */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libglfw3.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+5E21304BFB8D4CA8A8735992 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "glfw_config.h"; path = "../../../Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
+2DA74BE7248F405A976553CA /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "glfw3.h"; path = "../../external/nanogui/ext/glfw/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
+327699096D704B1587D3DA50 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "glfw3native.h"; path = "../../external/nanogui/ext/glfw/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
+0AE96311B20C4CDBB6B4468B /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.objc"; fileEncoding = 4; name = "cocoa_init.m"; path = "../../external/nanogui/ext/glfw/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
+ABBE4B20C7F042289C2FABA2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "cocoa_joystick.h"; path = "../../external/nanogui/ext/glfw/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
+E9C5118F98364AC6852C78DD /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.objc"; fileEncoding = 4; name = "cocoa_joystick.m"; path = "../../external/nanogui/ext/glfw/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
+9A529515CC784879BFC69B14 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.objc"; fileEncoding = 4; name = "cocoa_monitor.m"; path = "../../external/nanogui/ext/glfw/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
+8DAEF1B3A36C494D97E96B13 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "cocoa_platform.h"; path = "../../external/nanogui/ext/glfw/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
+2A09E3CCD496424DBEDBB5BB /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "cocoa_time.c"; path = "../../external/nanogui/ext/glfw/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
+B6E2F80034404EEB82FDD779 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.objc"; fileEncoding = 4; name = "cocoa_window.m"; path = "../../external/nanogui/ext/glfw/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
+97C754BD26DB4A83A42CD592 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "context.c"; path = "../../external/nanogui/ext/glfw/src/context.c"; sourceTree = SOURCE_ROOT; };
+E974258C93454FD6AF93F8F2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "init.c"; path = "../../external/nanogui/ext/glfw/src/init.c"; sourceTree = SOURCE_ROOT; };
+11F43E7024FB433787C4D37F /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "input.c"; path = "../../external/nanogui/ext/glfw/src/input.c"; sourceTree = SOURCE_ROOT; };
+C6D37165B5894D6EB883CACE /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "internal.h"; path = "../../external/nanogui/ext/glfw/src/internal.h"; sourceTree = SOURCE_ROOT; };
+FC303CDE88D8438CAF524E2A /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "monitor.c"; path = "../../external/nanogui/ext/glfw/src/monitor.c"; sourceTree = SOURCE_ROOT; };
+3B612DE4D9C24FFA80F89EE7 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "nsgl_context.h"; path = "../../external/nanogui/ext/glfw/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
+E6804141F43E4B49B793134E /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.objc"; fileEncoding = 4; name = "nsgl_context.m"; path = "../../external/nanogui/ext/glfw/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
+440A31038B294F6F9D3C6A6E /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "posix_tls.c"; path = "../../external/nanogui/ext/glfw/src/posix_tls.c"; sourceTree = SOURCE_ROOT; };
+5CB97DA216524924B0554A62 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "posix_tls.h"; path = "../../external/nanogui/ext/glfw/src/posix_tls.h"; sourceTree = SOURCE_ROOT; };
+1C8FD8A9F9904E288B05294A /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "vulkan.c"; path = "../../external/nanogui/ext/glfw/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
+B0E56544AC784924A07E84C6 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "window.c"; path = "../../external/nanogui/ext/glfw/src/window.c"; sourceTree = SOURCE_ROOT; };
+77F6C4C2430D4BCBBDB019DC /* glfw_objects */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libglfw_objects.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              0497F75EB88F469589EB9CEE  = {
+                     isa = PBXGroup;
+                     children = (
+                            F5D40A85D39B4091AC08AD66 /* Sources */,
+                            98A50AF449414AF583B3D63B /* Resources */,
+                            A708A22F54D3452388ED71A1 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              F5D40A85D39B4091AC08AD66 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            670D02ECF1074F8896B4DF0B /* ALL_BUILD */,
+                            403691BE80C74D1ABE6C7CB4 /* ZERO_CHECK */,
+                            96F5A5AA73AA4780B459BB49 /* bin2c */,
+                            500D7BB8E0624450AEB81C62 /* nanogui */,
+                            21CDDC5ADF834D6AAB863525 /* GLFW3 */,
+                            B619AEE3F60148F3AC92B457 /* glfw_objects */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              98A50AF449414AF583B3D63B /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              670D02ECF1074F8896B4DF0B /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            DF935E21377C47C681DBDA02 /* CMake Rules */,
+                            9B132AB4922C4C3FBF59AA84 /* /Users/gudbrand/libigl/shared/cmake/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              DF935E21377C47C681DBDA02 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              403691BE80C74D1ABE6C7CB4 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            BD5AD0D34A9A43BAA6647528 /* CMake Rules */,
+                            9B132AB4922C4C3FBF59AA84 /* /Users/gudbrand/libigl/shared/cmake/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              BD5AD0D34A9A43BAA6647528 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              96F5A5AA73AA4780B459BB49 /* bin2c */ = {
+                     isa = PBXGroup;
+                     children = (
+                            A963DD7435744CA49442C9F3 /* Source Files */,
+                            F283CF949C2B42ADAA276ED9 /* /Users/gudbrand/libigl/external/nanogui/CMakeLists.txt */,
+                     );
+                     name = bin2c;
+                     sourceTree = "<group>";
+              };
+              A963DD7435744CA49442C9F3 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4D4255E0DD074D8395D3CF23 /* /Users/gudbrand/libigl/external/nanogui/resources/bin2c.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              500D7BB8E0624450AEB81C62 /* nanogui */ = {
+                     isa = PBXGroup;
+                     children = (
+                            243B76E6175948AFB62B9EB9 /* Source Files */,
+                            3502EABD236D44F2A672828E /* Header Files */,
+                            DF48E352F56A4AE28A3D9E69 /* CMake Rules */,
+                            561407313EBA4849AA38DD83 /* Object Files */,
+                            F283CF949C2B42ADAA276ED9 /* /Users/gudbrand/libigl/external/nanogui/CMakeLists.txt */,
+                     );
+                     name = nanogui;
+                     sourceTree = "<group>";
+              };
+              243B76E6175948AFB62B9EB9 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AED1F66D585E404A99B2BE05 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp */,
+                            44284A8EE2BD414A8C40FFE8 /* /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src/nanovg.c */,
+                            F5F3D684CE0B4F0C93E318BA /* /Users/gudbrand/libigl/external/nanogui/src/button.cpp */,
+                            1E95EEBCA62B450E8AA8A384 /* /Users/gudbrand/libigl/external/nanogui/src/checkbox.cpp */,
+                            9A7E11A686B7420EB7036462 /* /Users/gudbrand/libigl/external/nanogui/src/colorpicker.cpp */,
+                            7BDB0225B532467781217460 /* /Users/gudbrand/libigl/external/nanogui/src/colorwheel.cpp */,
+                            AE8985285BFA493D9A083F5E /* /Users/gudbrand/libigl/external/nanogui/src/combobox.cpp */,
+                            7D9D645CC7EF4722AF1DA991 /* /Users/gudbrand/libigl/external/nanogui/src/common.cpp */,
+                            D308A1CFF0944F7FA916AE3F /* /Users/gudbrand/libigl/external/nanogui/src/darwin.mm */,
+                            6647083841164395857069FD /* /Users/gudbrand/libigl/external/nanogui/src/glutil.cpp */,
+                            F77DD26388A64FEE9AC1DB4F /* /Users/gudbrand/libigl/external/nanogui/src/graph.cpp */,
+                            560FBC71492F41BDAC28B648 /* /Users/gudbrand/libigl/external/nanogui/src/imagepanel.cpp */,
+                            C21F67E812BB4F62A269011B /* /Users/gudbrand/libigl/external/nanogui/src/imageview.cpp */,
+                            6372FA31AE174CA98D8B4B9E /* /Users/gudbrand/libigl/external/nanogui/src/label.cpp */,
+                            89016171A67A4533B28FCE8A /* /Users/gudbrand/libigl/external/nanogui/src/layout.cpp */,
+                            2568221F43DF43C4B4915F0D /* /Users/gudbrand/libigl/external/nanogui/src/messagedialog.cpp */,
+                            C11D8606CFD149D69EAD9B7C /* /Users/gudbrand/libigl/external/nanogui/src/popup.cpp */,
+                            17D09983D7114D6C8929FCF9 /* /Users/gudbrand/libigl/external/nanogui/src/popupbutton.cpp */,
+                            2C6F79861CC14D9E9F000E53 /* /Users/gudbrand/libigl/external/nanogui/src/progressbar.cpp */,
+                            2C65ECCD9D5442F8A05191BF /* /Users/gudbrand/libigl/external/nanogui/src/screen.cpp */,
+                            D871559285DB4BCE83A908E9 /* /Users/gudbrand/libigl/external/nanogui/src/serializer.cpp */,
+                            B09479C98F84456FB7901F5D /* /Users/gudbrand/libigl/external/nanogui/src/slider.cpp */,
+                            6A58C2D42861497DACEC4809 /* /Users/gudbrand/libigl/external/nanogui/src/stackedwidget.cpp */,
+                            5532324FF55942919CEDD1CD /* /Users/gudbrand/libigl/external/nanogui/src/tabheader.cpp */,
+                            BC7C3334B520408F81B19CDA /* /Users/gudbrand/libigl/external/nanogui/src/tabwidget.cpp */,
+                            C7207841110449B5956955EE /* /Users/gudbrand/libigl/external/nanogui/src/textbox.cpp */,
+                            17D48DF1C9B64DDD945CD792 /* /Users/gudbrand/libigl/external/nanogui/src/theme.cpp */,
+                            245E41F9FAEE4BB8941968FD /* /Users/gudbrand/libigl/external/nanogui/src/vscrollpanel.cpp */,
+                            071C5DCA6D784E5E80C14412 /* /Users/gudbrand/libigl/external/nanogui/src/widget.cpp */,
+                            584533D84F6E4BDF941784AD /* /Users/gudbrand/libigl/external/nanogui/src/window.cpp */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              3502EABD236D44F2A672828E /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            700F74C8E4AA49E699F5DE9C /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/button.h */,
+                            56A082E2CA524A56B8EDAEC8 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/checkbox.h */,
+                            78DAF5B147D04B9F92F534FB /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorpicker.h */,
+                            898D07E846D84C89A18FF02F /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/colorwheel.h */,
+                            E3AFAEF8E2184BDCAA88928E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/combobox.h */,
+                            14A4C67AAB8C41D981CA0677 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/common.h */,
+                            BA8074E5AAC74FD6A96C6309 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/formhelper.h */,
+                            E604A4ADA8654E5C89C3D126 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/glutil.h */,
+                            5DFE37E8E9E34737B4F41469 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/graph.h */,
+                            0B5C31E9AFBC43F4A2E71A57 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imagepanel.h */,
+                            DB0948FEFBAE4603B89B0583 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/imageview.h */,
+                            7EE4C44036394F73A3296B80 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/label.h */,
+                            69E92D88536E40BD922C016E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/layout.h */,
+                            B118E1ECF38E4A3299E028DA /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/messagedialog.h */,
+                            A3CEF07B38094920B760C72B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/nanogui.h */,
+                            71E943FB9DB74D0A96E4AB3F /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/opengl.h */,
+                            D0D66EEE4F044BF58B8CA869 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popup.h */,
+                            92F62E5D688B47EEA95E5873 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/popupbutton.h */,
+                            78610464E93240FE9A44030A /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/progressbar.h */,
+                            8F04E4A9034D47228FF5B6F2 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/screen.h */,
+                            D307D4920A7A49E981221D9E /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/core.h */,
+                            9F2C7395AE224DEB8774AAF7 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/opengl.h */,
+                            860038A02BCC4429BFBF2866 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/serializer/sparse.h */,
+                            D55ACCD243E84A24A55322FC /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/slider.h */,
+                            20D2D7D9D8494FFB819DF8BC /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/stackedwidget.h */,
+                            C1CEB1A7B9504C85B775554B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabheader.h */,
+                            09260F1A0C5A4CEB8C61E255 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/tabwidget.h */,
+                            E3F795C9BA3F4A06963FDDCE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/textbox.h */,
+                            720FB728F7AB46C1AB67B28B /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/theme.h */,
+                            02BB3427C7324C9A820389FE /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/toolbutton.h */,
+                            11552A5AADA24CB19812F938 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/vscrollpanel.h */,
+                            FEA20FF37449459E95695B39 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/widget.h */,
+                            B447875C95D44162BF008BD8 /* /Users/gudbrand/libigl/external/nanogui/include/nanogui/window.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              DF48E352F56A4AE28A3D9E69 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            FE08FAE1AF3041A9978F4DBE /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp.rule */,
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              561407313EBA4849AA38DD83 /* Object Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "Object Files";
+                     sourceTree = "<group>";
+              };
+              21CDDC5ADF834D6AAB863525 /* GLFW3 */ = {
+                     isa = PBXGroup;
+                     children = (
+                            451FED5D7F4641B084070CB6 /* glfw */,
+                     );
+                     name = GLFW3;
+                     sourceTree = "<group>";
+              };
+              451FED5D7F4641B084070CB6 /* glfw */ = {
+                     isa = PBXGroup;
+                     children = (
+                            6CFB3E31344E4B63ACD68A12 /* Object Files */,
+                            AC17164778984CF99AFAE1D4 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/CMakeLists.txt */,
+                     );
+                     name = glfw;
+                     sourceTree = "<group>";
+              };
+              6CFB3E31344E4B63ACD68A12 /* Object Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "Object Files";
+                     sourceTree = "<group>";
+              };
+              B619AEE3F60148F3AC92B457 /* glfw_objects */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4FD9B022469F45668EF209DF /* Source Files */,
+                            769E70F08BE4449286CBB329 /* Header Files */,
+                            AC17164778984CF99AFAE1D4 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/CMakeLists.txt */,
+                     );
+                     name = glfw_objects;
+                     sourceTree = "<group>";
+              };
+              4FD9B022469F45668EF209DF /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            0AE96311B20C4CDBB6B4468B /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_init.m */,
+                            E9C5118F98364AC6852C78DD /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.m */,
+                            9A529515CC784879BFC69B14 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_monitor.m */,
+                            2A09E3CCD496424DBEDBB5BB /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_time.c */,
+                            B6E2F80034404EEB82FDD779 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_window.m */,
+                            97C754BD26DB4A83A42CD592 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/context.c */,
+                            E974258C93454FD6AF93F8F2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/init.c */,
+                            11F43E7024FB433787C4D37F /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/input.c */,
+                            FC303CDE88D8438CAF524E2A /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/monitor.c */,
+                            E6804141F43E4B49B793134E /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.m */,
+                            440A31038B294F6F9D3C6A6E /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.c */,
+                            1C8FD8A9F9904E288B05294A /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/vulkan.c */,
+                            B0E56544AC784924A07E84C6 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/window.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              769E70F08BE4449286CBB329 /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            5E21304BFB8D4CA8A8735992 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/glfw_config.h */,
+                            2DA74BE7248F405A976553CA /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3.h */,
+                            327699096D704B1587D3DA50 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/include/GLFW/glfw3native.h */,
+                            ABBE4B20C7F042289C2FABA2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.h */,
+                            8DAEF1B3A36C494D97E96B13 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_platform.h */,
+                            C6D37165B5894D6EB883CACE /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/internal.h */,
+                            3B612DE4D9C24FFA80F89EE7 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.h */,
+                            5CB97DA216524924B0554A62 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              A708A22F54D3452388ED71A1 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            B37CE5D4645C4FFCA1A7E48E /* bin2c */,
+                            C65CD921CA1E4AEDA1E9F84B /* nanogui */,
+                            6E9057AF3BAB4BE29260FEA6 /* glfw */,
+                            77F6C4C2430D4BCBBDB019DC /* glfw_objects */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              F37752D073274C45A31A7604 /* bin2c */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 84B7799488344B9F8428E650 /* Build configuration list for PBXNativeTarget "bin2c" */;
+                     buildPhases = (
+                            8182D3A43373460587EFAEEA /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                     );
+                     name = bin2c;
+                     productName = bin2c;
+                     productReference = B37CE5D4645C4FFCA1A7E48E /* bin2c */;
+                     productType = "com.apple.product-type.tool";
+              };
+              034E3B45AB654B7FBCC7EF16 /* nanogui */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = ACBA7F21C0B5477783374E90 /* Build configuration list for PBXNativeTarget "nanogui" */;
+                     buildPhases = (
+                            D32C93EF13DD42B8AB783791 /* CMake Rules */,
+                            201E888DDB854F688D2964D0 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            7574034E4DA14164936D8953 /* PBXTargetDependency */,
+                            88346CCEE6EF43F291E3947A /* PBXTargetDependency */,
+                     );
+                     name = nanogui;
+                     productName = nanogui;
+                     productReference = C65CD921CA1E4AEDA1E9F84B /* nanogui */;
+                     productType = "com.apple.product-type.library.static";
+              };
+              543223C7E20E4FE1884BA8BC /* glfw */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 7A0CDA56AEC145E093AFABE6 /* Build configuration list for PBXNativeTarget "glfw" */;
+                     buildPhases = (
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            64B99FEDAD7A4DF6AB1D73C5 /* PBXTargetDependency */,
+                            C43260036B5E433292525507 /* PBXTargetDependency */,
+                     );
+                     name = glfw;
+                     productName = glfw;
+                     productReference = 6E9057AF3BAB4BE29260FEA6 /* glfw */;
+                     productType = "com.apple.product-type.library.static";
+              };
+              7BA2EE51BB36436FB218E67F /* glfw_objects */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 0C2AAFE17249488F941BDFCD /* Build configuration list for PBXNativeTarget "glfw_objects" */;
+                     buildPhases = (
+                            C2C10A6772A04FABA349C3EF /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            C61081DE991741EBA9E0DAA3 /* PBXTargetDependency */,
+                     );
+                     name = glfw_objects;
+                     productName = glfw_objects;
+                     productReference = 77F6C4C2430D4BCBBDB019DC /* glfw_objects */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              E805BC37E7D7449786EB06C4 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = F1FB0F0D045C4173AA6E1349 /* Build configuration list for PBXProject  "libigl" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            FB4D0AECEF034978A7FFD904 /* Debug */,
+                            6ECE9C0BB61C4A32B4AA14B8 /* Release */,
+                            9921E3DB93AA49819A1AC123 /* MinSizeRel */,
+                            46C52376670E45CF8E915776 /* RelWithDebInfo */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 0497F75EB88F469589EB9CEE;
+                     projectDirPath = /Users/gudbrand/libigl/shared/cmake;
+                     projectRoot = "";
+                     targets = (
+                            DDD008CFAFC34D90AD9D7110 /* ALL_BUILD */,
+                            775F0B932FD94780B0F5C81C /* ZERO_CHECK */,
+                            D21E338F54704A52BD182CDE /* install */,
+                            F37752D073274C45A31A7604 /* bin2c */,
+                            034E3B45AB654B7FBCC7EF16 /* nanogui */,
+                            543223C7E20E4FE1884BA8BC /* glfw */,
+                            7BA2EE51BB36436FB218E67F /* glfw_objects */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              2A07923B7DDB417A9A345DF5 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              31720050F2D34487AEEA50BF /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/gudbrand/Documents/C++/ICP_Project/build/libigl -f /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              E723031391774F5385121B08 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              B1105AADDD6743B5AFEE6818 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/gudbrand/Documents/C++/ICP_Project/build/libigl -f /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              0956F9286FC5478581B4564E /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              695DDCBAF46E4888B751EF9C /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/gudbrand/Documents/C++/ICP_Project/build/libigl -f /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              D32C93EF13DD42B8AB783791 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui -f /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/CMakeScripts/nanogui_cmakeRulesBuildPhase.make$CONFIGURATION cmake_check_multiple_outputs all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              8182D3A43373460587EFAEEA /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            F3CCC144B45645E3B3261735 /* /Users/gudbrand/libigl/external/nanogui/resources/bin2c.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+              201E888DDB854F688D2964D0 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            69618C5C626041E49F4C6088 /* /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/nanogui_resources.cpp */,
+                            5070356599794A2FABC30A0C /* /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src/nanovg.c */,
+                            C5204D422C834BEBB3CE5E38 /* /Users/gudbrand/libigl/external/nanogui/src/button.cpp */,
+                            0AC548A26B0644A4BCC279CE /* /Users/gudbrand/libigl/external/nanogui/src/checkbox.cpp */,
+                            764DF3B8E3E14690A792C991 /* /Users/gudbrand/libigl/external/nanogui/src/colorpicker.cpp */,
+                            E1035249EEAF4B54AFC8C769 /* /Users/gudbrand/libigl/external/nanogui/src/colorwheel.cpp */,
+                            1DE92E133CD04F5BBF4E4951 /* /Users/gudbrand/libigl/external/nanogui/src/combobox.cpp */,
+                            A1017663055847D484629A3E /* /Users/gudbrand/libigl/external/nanogui/src/common.cpp */,
+                            06893EF2D13945E2906A3E4F /* /Users/gudbrand/libigl/external/nanogui/src/darwin.mm */,
+                            F3F9D03CA56340C6857BBC32 /* /Users/gudbrand/libigl/external/nanogui/src/glutil.cpp */,
+                            963FB40208234614A6754F90 /* /Users/gudbrand/libigl/external/nanogui/src/graph.cpp */,
+                            D41C6B0CCAEA45AF991C3940 /* /Users/gudbrand/libigl/external/nanogui/src/imagepanel.cpp */,
+                            A653BFF635294781BEAF9E7E /* /Users/gudbrand/libigl/external/nanogui/src/imageview.cpp */,
+                            72C2D6CA6E1D4C79B5000CFF /* /Users/gudbrand/libigl/external/nanogui/src/label.cpp */,
+                            ADC04B5B77D14FCB83984284 /* /Users/gudbrand/libigl/external/nanogui/src/layout.cpp */,
+                            37A6E4D85C8A449F861313CF /* /Users/gudbrand/libigl/external/nanogui/src/messagedialog.cpp */,
+                            C5CFEE71A29349E7A9DAADBE /* /Users/gudbrand/libigl/external/nanogui/src/popup.cpp */,
+                            88411DE22E7E4052ABCB05A6 /* /Users/gudbrand/libigl/external/nanogui/src/popupbutton.cpp */,
+                            61E3A4C7E52B4E41BFD17AD3 /* /Users/gudbrand/libigl/external/nanogui/src/progressbar.cpp */,
+                            3544A2F6BB294575B6369EB0 /* /Users/gudbrand/libigl/external/nanogui/src/screen.cpp */,
+                            188CB594A5884DECBD27384F /* /Users/gudbrand/libigl/external/nanogui/src/serializer.cpp */,
+                            FF826EF026EF4661931E7514 /* /Users/gudbrand/libigl/external/nanogui/src/slider.cpp */,
+                            A0EEAF1A08EA4B22AB8E801F /* /Users/gudbrand/libigl/external/nanogui/src/stackedwidget.cpp */,
+                            2BBDA5FADBEA4DA487765955 /* /Users/gudbrand/libigl/external/nanogui/src/tabheader.cpp */,
+                            75B9887ACBF04F1FAE8004AC /* /Users/gudbrand/libigl/external/nanogui/src/tabwidget.cpp */,
+                            78D6C403B2BF42C2B1CF50EC /* /Users/gudbrand/libigl/external/nanogui/src/textbox.cpp */,
+                            F7866D0F40484B809DF1392C /* /Users/gudbrand/libigl/external/nanogui/src/theme.cpp */,
+                            95A4BA6004C64543A2B6EA05 /* /Users/gudbrand/libigl/external/nanogui/src/vscrollpanel.cpp */,
+                            C8169594AA9A41A9887B662B /* /Users/gudbrand/libigl/external/nanogui/src/widget.cpp */,
+                            57E54223C62E49A9BFB43287 /* /Users/gudbrand/libigl/external/nanogui/src/window.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+              C2C10A6772A04FABA349C3EF /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            448C62D1ECC347DDA90C8805 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_init.m */,
+                            DC178B985F134F108071715C /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_joystick.m */,
+                            79C8DECB0D5D4FB9A7D28205 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_monitor.m */,
+                            3F148DD46F674D1FB3D07F67 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_time.c */,
+                            78ACEB4E0A494BA791252A11 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/cocoa_window.m */,
+                            57544E7A9FD849A190C6F53B /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/context.c */,
+                            AC81DB1F4F3D40198925DD6B /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/init.c */,
+                            34CC199C7AD44816A68D8CC2 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/input.c */,
+                            A7DE87591F744729B4A32365 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/monitor.c */,
+                            5F96D619941D488BBC66FE98 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/nsgl_context.m */,
+                            49C4C11C142E48E5BFC35473 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/posix_tls.c */,
+                            CA5C6216BCBB47BA8B9D9278 /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/vulkan.c */,
+                            9EDFD57FDE844EACB9BB57CD /* /Users/gudbrand/libigl/external/nanogui/ext/glfw/src/window.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              3A08F126D336444BA0AFC027 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = F37752D073274C45A31A7604 /* bin2c */;
+                     targetProxy = 8DE3C158778E44968C77C0AC /* PBXContainerItemProxy */;
+              };
+              91737C3AFF1A4E2C95CF4F88 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 775F0B932FD94780B0F5C81C /* ZERO_CHECK */;
+                     targetProxy = 480F6D650CCC4FBB8843DCAB /* PBXContainerItemProxy */;
+              };
+              16AD308E593847FB8A7DBD2C /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7BA2EE51BB36436FB218E67F /* glfw_objects */;
+                     targetProxy = 924F71BA5E074456B50ED56B /* PBXContainerItemProxy */;
+              };
+              F29AE5846D2746D5B79F4B7D /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 543223C7E20E4FE1884BA8BC /* glfw */;
+                     targetProxy = B5E1D3694408433798C212C0 /* PBXContainerItemProxy */;
+              };
+              A7C15D8389004D2D8343A306 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 034E3B45AB654B7FBCC7EF16 /* nanogui */;
+                     targetProxy = C87B5D1EC25A49E59A1C6225 /* PBXContainerItemProxy */;
+              };
+              F1AC353E49294B53927B88C4 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DDD008CFAFC34D90AD9D7110 /* ALL_BUILD */;
+                     targetProxy = C8546372FDFA424FA982BC45 /* PBXContainerItemProxy */;
+              };
+              7574034E4DA14164936D8953 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = F37752D073274C45A31A7604 /* bin2c */;
+                     targetProxy = 03272AE972FC4F379C8F501D /* PBXContainerItemProxy */;
+              };
+              88346CCEE6EF43F291E3947A /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7BA2EE51BB36436FB218E67F /* glfw_objects */;
+                     targetProxy = 07473B72954445E9B7933918 /* PBXContainerItemProxy */;
+              };
+              64B99FEDAD7A4DF6AB1D73C5 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 775F0B932FD94780B0F5C81C /* ZERO_CHECK */;
+                     targetProxy = E05D4E8900F946B6B6A6E35E /* PBXContainerItemProxy */;
+              };
+              C43260036B5E433292525507 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7BA2EE51BB36436FB218E67F /* glfw_objects */;
+                     targetProxy = 944E9DFC0FE7434AA3422433 /* PBXContainerItemProxy */;
+              };
+              C61081DE991741EBA9E0DAA3 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 775F0B932FD94780B0F5C81C /* ZERO_CHECK */;
+                     targetProxy = 5FC4050B5CF740D9B60AFCE2 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              0C1CD059D7464759899FEEB9 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/build";
+                     };
+                     name = Debug;
+              };
+              9C3D57EF98DC4DF3B3BE6BC0 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/build";
+                     };
+                     name = Release;
+              };
+              53BB32D855BF4F1DAF21D873 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/build";
+                     };
+                     name = MinSizeRel;
+              };
+              FCF19C4D823D4B81AE0D5606 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/build";
+                     };
+                     name = RelWithDebInfo;
+              };
+              D2076D505F0D4F2480BA5B54 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              6652CF8A0318443896F9CD9C /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              83CAEA2F48B34364B1D51CEF /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              C5C1912F9F8645DB814293FF /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              D2F7426E68444A5AB8BE0339 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              8F14F5F1B27640C4B97C78C4 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              87C4E24985A84BFC8DFD764E /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              160C734E0DD64FE9BAD7F5A0 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              DEDDB031EA4A41EFB67EAAF5 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              E54DE5C650A1447D98AF8FC6 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              8E2FD0415BF44E3E92390585 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              0B5A0DFF0C4144B2899CDB50 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              1996E573D51E40D3A72534C6 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/Debug";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = bin2c;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              34382100B42A45D49AD7F266 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/Release";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG  ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = bin2c;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              8A576F80A8784176BDD004EE /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/MinSizeRel";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG  ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = bin2c;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              0E619DAA428C4B338042D51D /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/RelWithDebInfo";
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations        -DNDEBUG  ";
+                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = bin2c;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              6CE3B2424137427380C2937B /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NANOGUI_BUILD, CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11 -Wno-deprecated-declarations -std=c++11 -w -Wall -Wextra -std=c++14     ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = nanogui;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              90C2C974317C4C9A91ACD598 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NANOGUI_BUILD, CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11 -Wno-deprecated-declarations -std=c++11 -w -Wall -Wextra -std=c++14     -DNDEBUG  ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = nanogui;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              64EAEB5D87DF407694400694 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NANOGUI_BUILD, CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11 -Wno-deprecated-declarations -std=c++11 -w -Wall -Wextra -std=c++14     -DNDEBUG  ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = nanogui;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              145ADC960AF14608B667D94D /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NANOGUI_BUILD, CORO_SJLJ, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/eigen, /Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/nanovg/src, /Users/gudbrand/libigl/external/nanogui/include, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui", /Users/gudbrand/libigl/external/nanogui/ext/coro, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations        -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11 -Wno-deprecated-declarations -std=c++11 -w -Wall -Wextra -std=c++14        -DNDEBUG  ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = nanogui;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              4E692C6A0CCA4618924ED8FC /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations    -fPIC  ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              B2B3E32261E74B248E0C1A8F /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG -fPIC  ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              088696F0FF7E47C4BA85D1F6 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG -fPIC  ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              C8EED20938AF4499B4EA3CBC /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations        -DNDEBUG -fPIC  ";
+                            OTHER_LIBTOOLFLAGS = " /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/context.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/input.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/vulkan.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_init.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_joystick.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_monitor.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_window.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/cocoa_time.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/posix_tls.o /Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glfw_objects.build/Objects-normal/$(CURRENT_ARCH)/nsgl_context.o";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              142780867A8E4260BA1E5A93 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/libigl.build/Debug/glfw_objects.build/Objects-normal/";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/glfw/src, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations    -Wall -Wno-deprecated-declarations  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw_objects;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              9EB80DA7D577489886F9D434 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/libigl.build/Release/glfw_objects.build/Objects-normal/";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/glfw/src, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG -Wall -Wno-deprecated-declarations  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw_objects;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              D13AC857A04547358C4ED479 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/libigl.build/MinSizeRel/glfw_objects.build/Objects-normal/";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/glfw/src, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations     -DNDEBUG -Wall -Wno-deprecated-declarations  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw_objects;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              B7F8F68DBEAA48289437EBFB /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src/libigl.build/RelWithDebInfo/glfw_objects.build/Objects-normal/";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/gudbrand/libigl/external/nanogui/ext/glfw/include, /Users/gudbrand/libigl/external/nanogui/ext/glfw/src, "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = " -Wno-deprecated-declarations        -DNDEBUG -Wall -Wno-deprecated-declarations  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw_objects;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/gudbrand/Documents/C++/ICP_Project/build/libigl/nanogui/ext_build/glfw/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              F1FB0F0D045C4173AA6E1349 /* Build configuration list for PBXProject  "libigl" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            0C1CD059D7464759899FEEB9 /* Debug */,
+                            9C3D57EF98DC4DF3B3BE6BC0 /* Release */,
+                            53BB32D855BF4F1DAF21D873 /* MinSizeRel */,
+                            FCF19C4D823D4B81AE0D5606 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              E42E17880ADE4FA598066086 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D2076D505F0D4F2480BA5B54 /* Debug */,
+                            6652CF8A0318443896F9CD9C /* Release */,
+                            83CAEA2F48B34364B1D51CEF /* MinSizeRel */,
+                            C5C1912F9F8645DB814293FF /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              52EEE4D546B64D1EBA6D10EA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D2F7426E68444A5AB8BE0339 /* Debug */,
+                            8F14F5F1B27640C4B97C78C4 /* Release */,
+                            87C4E24985A84BFC8DFD764E /* MinSizeRel */,
+                            160C734E0DD64FE9BAD7F5A0 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              BD3B7440CE864814AD5B8128 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            DEDDB031EA4A41EFB67EAAF5 /* Debug */,
+                            E54DE5C650A1447D98AF8FC6 /* Release */,
+                            8E2FD0415BF44E3E92390585 /* MinSizeRel */,
+                            0B5A0DFF0C4144B2899CDB50 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              84B7799488344B9F8428E650 /* Build configuration list for PBXNativeTarget "bin2c" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            1996E573D51E40D3A72534C6 /* Debug */,
+                            34382100B42A45D49AD7F266 /* Release */,
+                            8A576F80A8784176BDD004EE /* MinSizeRel */,
+                            0E619DAA428C4B338042D51D /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              ACBA7F21C0B5477783374E90 /* Build configuration list for PBXNativeTarget "nanogui" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            6CE3B2424137427380C2937B /* Debug */,
+                            90C2C974317C4C9A91ACD598 /* Release */,
+                            64EAEB5D87DF407694400694 /* MinSizeRel */,
+                            145ADC960AF14608B667D94D /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              7A0CDA56AEC145E093AFABE6 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            4E692C6A0CCA4618924ED8FC /* Debug */,
+                            B2B3E32261E74B248E0C1A8F /* Release */,
+                            088696F0FF7E47C4BA85D1F6 /* MinSizeRel */,
+                            C8EED20938AF4499B4EA3CBC /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              0C2AAFE17249488F941BDFCD /* Build configuration list for PBXNativeTarget "glfw_objects" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            142780867A8E4260BA1E5A93 /* Debug */,
+                            9EB80DA7D577489886F9D434 /* Release */,
+                            D13AC857A04547358C4ED479 /* MinSizeRel */,
+                            B7F8F68DBEAA48289437EBFB /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = E805BC37E7D7449786EB06C4;
+}
