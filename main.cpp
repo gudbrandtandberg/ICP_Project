@@ -28,7 +28,13 @@ bool setup_icp_ui(igl::viewer::Viewer& viewer);
 void compute_closest_points(Eigen::MatrixXd &data_vertices,
 							kd_tree_t &model_tree,
 							std::vector<int> &point_correspondences);
-void compute_registration(Eigen::VectorXd &registration_quaternion, std::vector<int> pc);
+void compute_registration(Eigen::Vector3d &translation,
+						  Eigen::Matrix3d &rotation,
+						  std::vector<int> pc);
+
+void quaternion_to_matrix(Eigen::Vector4d q, Eigen::Matrix3d R);
+
+void transform_mesh(Mesh mesh, Eigen::Vector3d translation, Eigen::Matrix3d rotation);
 
 void icp_align();
 
@@ -67,11 +73,24 @@ void icp_align() {
 	kd_tree_t model_tree(3 /*dim*/, model_verts, 10 /* max leaf */ );
 	model_tree.index->buildIndex();
 	
+	size_t N_data = data_verts.rows();
+	
 	while (iter_counter < iterations) {
 		
 		compute_closest_points(data_verts, model_tree, point_correspondences);
 		
-		compute_registration(registration_quaternion, point_correspondences);
+		Eigen::Vector3d translation = Eigen::Vector3d::Zero();
+		Eigen::Matrix3d rotation = Eigen::Matrix3d::Zero();
+		
+		compute_registration(translation, rotation, point_correspondences);
+		
+		data_verts = data_verts * rotation.transpose();
+		data_verts = data_verts + translation.transpose().colwise().replicate(N_data);
+		
+		Mesh concat_mesh = concat_meshes(model_verts, model_faces, data_verts, data_faces);
+		
+		viewer.data.clear();
+		viewer.data.set_mesh(concat_mesh.first, concat_mesh.second);
 		
 		iter_counter++;
 	}
@@ -105,7 +124,8 @@ void compute_closest_points(Eigen::MatrixXd &data_vertices,
 	
 }
 
-void compute_registration(Eigen::VectorXd &registration_quaternion,
+void compute_registration(Eigen::Vector3d &translation,
+						  Eigen::Matrix3d &rotation,
 						  std::vector<int> pc) {
 	
 	size_t N_data = data_verts.rows();
@@ -153,7 +173,35 @@ void compute_registration(Eigen::VectorXd &registration_quaternion,
 	eigen_solver.eigenvalues().real().maxCoeff(&max_ev_index);
 	Eigen::Vector4d q_optimal = eigen_solver.eigenvectors().real().col(max_ev_index);
 	
-	std::cout << q_optimal << std::endl;
+	
+	quaternion_to_matrix(q_optimal, rotation);
+	
+	translation = model_COM + rotation*data_COM;
+	
+}
+
+void transform_mesh(Mesh mesh,
+					Eigen::Vector3d translation,
+					Eigen::Matrix3d rotation) {
+	
+	
+	;
+	
+}
+
+void quaternion_to_matrix(Eigen::Vector4d q, Eigen::Matrix3d R) {
+	
+	R(0, 0) = q[0]*q[0] + q[1]*q[1] - q[2]*q[2] - q[3]*q[3];
+	R(1, 0) = 2*(q[1]*q[2] + q[0]*q[3]);
+	R(2, 0) = 2*(q[1]*q[3] - q[0]*q[2]);
+	
+	R(0, 1) = 2*(q[1]*q[2] - q[0]*q[3]);
+	R(1, 1) = q[0]*q[0] - q[1]*q[1] + q[2]*q[2] - q[3]*q[3];
+	R(2, 1) = 2*(q[2]*q[3] + q[0]*q[1]);
+	
+	R(0, 2) = 2*(q[1]*q[3] + q[0]*q[2]);
+	R(1, 2) = 2*(q[2]*q[3] - q[0]*q[1]);
+	R(2, 2) = q[0]*q[0] - q[1]*q[1] - q[2]*q[2] + q[3]*q[3];
 	
 }
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502754244.77703"
+            timestampString = "502763870.713933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502754244.77703"
+            timestampString = "502763724.269286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "icp_align()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502754244.77703"
+            timestampString = "502763870.713933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502754244.77703"
+            timestampString = "502763870.713933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502754244.77703"
+            timestampString = "502763870.713933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502754244.77703"
+            timestampString = "502763870.713933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
             landmarkType = "7">
             <Locations>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502756958.817222"
+            timestampString = "502763870.713933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "compute_registration(Eigen::VectorXd &amp;registration_quaternion, std::vector&lt;int&gt; pc)"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "compute_registration(Eigen::Vector3d &amp;translation, Eigen::Matrix3d &amp;rotation, std::vector&lt;int&gt; pc)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,12 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502756958.817222"
+            timestampString = "502763870.713933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "compute_registration(Eigen::VectorXd &amp;registration_quaternion, std::vector&lt;int&gt; pc)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "compute_registration(Eigen::Vector3d &amp;translation, Eigen::Matrix3d &amp;rotation, std::vector&lt;int&gt; pc)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
