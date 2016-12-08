@@ -60,6 +60,7 @@
 		355326CECDBD46ECBCAB4779 /* cocoa_window.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7A785838042F3931F912F /* cocoa_window.m */; settings = {COMPILER_FLAGS = ""; }; };
 		38B84B608D8A44E9BD1BC379 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3D95B19514A07A6D55B49 /* common.cpp */; settings = {COMPILER_FLAGS = ""; }; };
 		3E3DB664975E482CBDF6A47D /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5A8836D26ED4AFC8D0C90AE /* window.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		4268D6D11DF8CC8F00B57E1F /* ICP_Solver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4268D6CF1DF8CC8F00B57E1F /* ICP_Solver.cpp */; };
 		434F37555AFC4D23A2FC59DF /* graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD771D5E1F1D40E295C9364A /* graph.cpp */; settings = {COMPILER_FLAGS = ""; }; };
 		43608E8567364A2C881DDF29 /* nanogui_resources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19814DFB118944C889D98B3B /* nanogui_resources.cpp */; settings = {COMPILER_FLAGS = ""; }; };
 		47539373B5ED41F29DA82C3B /* glutil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E06D62E493B495E8E024C1A /* glutil.cpp */; settings = {COMPILER_FLAGS = ""; }; };
@@ -212,6 +213,8 @@
 		3CE24357C01C492E8E09B28E /* posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = ../../../libigl/external/nanogui/ext/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
 		4268D6CD1DF73D0300B57E1F /* ICP_Project_Proposal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ICP_Project_Proposal.txt; sourceTree = "<group>"; };
 		4268D6CE1DF73D0300B57E1F /* log.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = log.txt; sourceTree = "<group>"; };
+		4268D6CF1DF8CC8F00B57E1F /* ICP_Solver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ICP_Solver.cpp; sourceTree = "<group>"; };
+		4268D6D01DF8CC8F00B57E1F /* ICP_Solver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ICP_Solver.hpp; sourceTree = "<group>"; };
 		44DAFEF278E8466CBA0BC08C /* tabheader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tabheader.cpp; path = ../../../libigl/external/nanogui/src/tabheader.cpp; sourceTree = SOURCE_ROOT; };
 		451357CE4AE54545AC1C5395 /* screen.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = screen.cpp; path = ../../../libigl/external/nanogui/src/screen.cpp; sourceTree = SOURCE_ROOT; };
 		482453596232456EA09246CC /* libglfw3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -416,6 +419,8 @@
 			isa = PBXGroup;
 			children = (
 				E4C36BE2DB984197BCB58BF9 /* main.cpp */,
+				4268D6D01DF8CC8F00B57E1F /* ICP_Solver.hpp */,
+				4268D6CF1DF8CC8F00B57E1F /* ICP_Solver.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97940C092F414FDAAEAE7506 /* main.cpp in Sources */,
+				4268D6D11DF8CC8F00B57E1F /* ICP_Solver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

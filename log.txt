@@ -1,12 +1,24 @@
 19/11:
-- got libigl example project working after a while
+- got libigl example project working
 - tweaked example project to my needs; cmake + xcode working together smoothly
 - can load obj-mesh and launch viewer
 - collect informative sources on ICP-variants. find good test-case meshes.
 
-plan this weekend: set up skeleton of complete project, notable nice UI and
-nice code setup. Think about large scale program flow/design choices.
+1/12:
+- had problems getting the nanogui-viewer working. linking problems. fixed it
+- learned it's due on the 12th so reprioritizing this, doing other things
 
-plan this week: get *basic* icp-alignment of 3d shapes working on a few examples
+6/12:
+- wrote out the main meat of the icp algorithm. everything went smoothly
+- first results looking good.
+
+7/12
+- realized that what I wrote yesterday didn't work after all.. spent the whole
+day bug-hunting. Decided to structurally refactor the entire project. Project is
+now object-oriented. still needs some cleaning but getting better.
+- finally found that the problem was in computing point correspondences! diamond
+and moon models now align nicely. bunny does not find global minimum. I think
+rejecting pairs/weighting will remedy this.. will try tomorrow!
+
 
 

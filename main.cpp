@@ -2,249 +2,119 @@
 
 #include <igl/viewer/Viewer.h>
 #include <igl/readOBJ.h>
-#include <string>
+#include <igl/writeOBJ.h>
+
+#include <nanogui/progressbar.h>
 #include "/usr/local/include/nanoflann/nanoflann.hpp"
+
+#include <string>
+
+#include "ICP_Solver.hpp"
 
 std::string MESH_DIRECTORY = "/Users/gudbrand/Documents/C++/ICP_Project/mesh/";
 
-
 typedef std::pair<Eigen::MatrixXd, Eigen::MatrixXi> Mesh;
-
-typedef nanoflann::KDTreeEigenMatrixAdaptor<Eigen::MatrixXd> kd_tree_t;
-
-int iterations = 1;
 
 enum mesh_selection {
 	moon_surface = 0,
-	bunny_scan
+	bunny_scan,
+	diamond
 };
 
 void init_viewer();
-void reload_mesh();
-Mesh concat_meshes(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
-				   Eigen::MatrixXd VB, Eigen::MatrixXi FB);
+
+void load_mesh();
+
 bool setup_icp_ui(igl::viewer::Viewer& viewer);
 
-void compute_closest_points(Eigen::MatrixXd &data_vertices,
-							kd_tree_t &model_tree,
-							std::vector<int> &point_correspondences);
-void compute_registration(Eigen::Vector3d &translation,
-						  Eigen::Matrix3d &rotation,
-						  std::vector<int> pc);
+void perform_icp();
 
-void quaternion_to_matrix(Eigen::Vector4d q, Eigen::Matrix3d R);
+Mesh concat_meshes(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
+				   Eigen::MatrixXd VB, Eigen::MatrixXi FB);
 
-void transform_mesh(Mesh mesh, Eigen::Vector3d translation, Eigen::Matrix3d rotation);
+void set_mesh(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
+			  Eigen::MatrixXd VB, Eigen::MatrixXi FB);
 
-void icp_align();
 
 /* currently selected mesh */
-mesh_selection selected_mesh = moon_surface;
+mesh_selection selected_mesh = diamond;
 
 /* The libigl-viewer  */
 igl::viewer::Viewer viewer;
 
-// Target datastructure
+/* "Target" datastructure */
 Eigen::MatrixXd model_verts;
 Eigen::MatrixXi model_faces;
 
-// Data datastructure
+/* "Data" datastructure */
 Eigen::MatrixXd data_verts;
 Eigen::MatrixXi data_faces;
 
+/* The ICP solver */
+ICP_Solver solver;
+
+/*
+ * Initialize ui and solver and start the mainloop
+ */
 
 int main(int argc, char *argv[])
 {
+	load_mesh();
+	solver = ICP_Solver(data_verts, model_verts);
 	init_viewer();
-	
-}
-
-void icp_align() {
-	
-	
-	int iter_counter = 0;
-	
-	std::vector<int> point_correspondences(data_verts.rows());
-	Eigen::VectorXd registration_quaternion;
-	registration_quaternion.resize(8);
-	
-	
-	/* Build a kd-tree of the model mesh */
-	kd_tree_t model_tree(3 /*dim*/, model_verts, 10 /* max leaf */ );
-	model_tree.index->buildIndex();
-	
-	size_t N_data = data_verts.rows();
-	
-	while (iter_counter < iterations) {
-		
-		compute_closest_points(data_verts, model_tree, point_correspondences);
-		
-		Eigen::Vector3d translation = Eigen::Vector3d::Zero();
-		Eigen::Matrix3d rotation = Eigen::Matrix3d::Zero();
-		
-		compute_registration(translation, rotation, point_correspondences);
-		
-		data_verts = data_verts * rotation.transpose();
-		data_verts = data_verts + translation.transpose().colwise().replicate(N_data);
-		
-		Mesh concat_mesh = concat_meshes(model_verts, model_faces, data_verts, data_faces);
-		
-		viewer.data.clear();
-		viewer.data.set_mesh(concat_mesh.first, concat_mesh.second);
-		
-		iter_counter++;
-	}
-	
-}
-
-void compute_closest_points(Eigen::MatrixXd &data_vertices,
-							kd_tree_t &model_tree,
-							std::vector<int> &point_correspondences) {
-	
-	
-	
-	// do a knn search
-	const size_t num_results = 1;
-	std::vector<size_t> ret_indexes(num_results);
-	std::vector<double> out_dists_sqr(num_results);
-	
-	nanoflann::KNNResultSet<double> resultSet(num_results);
-	
-	
-	for (int i=0; i<data_vertices.rows(); i++) {
-		std::vector<double> query_pt(data_vertices.row(i).data(),
-									 data_vertices.row(i).data() + 3);
-		
-		resultSet.init(&ret_indexes[0], &out_dists_sqr[0]);
-		model_tree.index->findNeighbors(resultSet, &query_pt[0], nanoflann::SearchParams(10));
-		
-		point_correspondences[i] = ret_indexes[0];
-		
-	}
-	
-}
-
-void compute_registration(Eigen::Vector3d &translation,
-						  Eigen::Matrix3d &rotation,
-						  std::vector<int> pc) {
-	
-	size_t N_data = data_verts.rows();
-	size_t N_model = model_verts.rows();
-	
-	/* Centres-of-mass */
-	Eigen::Vector3d data_COM = Eigen::Vector3d::Zero();
-	Eigen::Vector3d model_COM = Eigen::Vector3d::Zero();
-	
-	for (int i=0; i<N_data; i++) {
-		data_COM += data_verts.row(i);
-	} data_COM /= N_data;
-	
-	for (int i=0; i<N_model; i++) {
-		model_COM += model_verts.row(i);
-	} model_COM /= N_model;
-	
-	/* Construct covariance matrix */
-	Eigen::Matrix3d covariance_matrix = Eigen::Matrix3d::Zero();
-	for (int i=0; i<N_data; i++) {
-		covariance_matrix += (data_verts.row(i).transpose() * model_verts.row(pc[i]));
-	} covariance_matrix /= N_data;
-	covariance_matrix -= (data_COM * model_COM.transpose());
-	
-	//std::cout << covariance_matrix << std::endl;
-	
-	/* Construct Q-matrix */
-	Eigen::Matrix3d A = covariance_matrix - covariance_matrix.transpose();
-	Eigen::Vector3d delta;
-	delta << A(1, 2), A(2, 0), A(0, 1);
-	
-	Eigen::Matrix4d Q;
-	double Q_trace = covariance_matrix.trace();
-	Q(0, 0) = Q_trace;
-	Q.block(1, 0, 3, 1) = delta;
-	Q.block(0, 1, 1, 3) = delta.transpose();
-	Q.block(1, 1, 3, 3) = covariance_matrix
-						  + covariance_matrix.transpose()
-						  - Q_trace * Eigen::MatrixXd::Identity(3,3);
-	
-	
-	
-	Eigen::EigenSolver<Eigen::Matrix4d> eigen_solver(Q);
-	Eigen::MatrixXd::Index max_ev_index;
-	eigen_solver.eigenvalues().real().maxCoeff(&max_ev_index);
-	Eigen::Vector4d q_optimal = eigen_solver.eigenvectors().real().col(max_ev_index);
-	
-	
-	quaternion_to_matrix(q_optimal, rotation);
-	
-	translation = model_COM + rotation*data_COM;
-	
-}
-
-void transform_mesh(Mesh mesh,
-					Eigen::Vector3d translation,
-					Eigen::Matrix3d rotation) {
-	
-	
-	;
-	
-}
-
-void quaternion_to_matrix(Eigen::Vector4d q, Eigen::Matrix3d R) {
-	
-	R(0, 0) = q[0]*q[0] + q[1]*q[1] - q[2]*q[2] - q[3]*q[3];
-	R(1, 0) = 2*(q[1]*q[2] + q[0]*q[3]);
-	R(2, 0) = 2*(q[1]*q[3] - q[0]*q[2]);
-	
-	R(0, 1) = 2*(q[1]*q[2] - q[0]*q[3]);
-	R(1, 1) = q[0]*q[0] - q[1]*q[1] + q[2]*q[2] - q[3]*q[3];
-	R(2, 1) = 2*(q[2]*q[3] + q[0]*q[1]);
-	
-	R(0, 2) = 2*(q[1]*q[3] + q[0]*q[2]);
-	R(1, 2) = 2*(q[2]*q[3] - q[0]*q[1]);
-	R(2, 2) = q[0]*q[0] - q[1]*q[1] - q[2]*q[2] + q[3]*q[3];
-	
 }
 
 void init_viewer() {
-	// Extend viewer menu
-	viewer.callback_init = setup_icp_ui;
-	
-	reload_mesh();
-	
 	viewer.data.set_face_based(true);
 	viewer.core.show_lines = false;
-	
+	viewer.callback_init = setup_icp_ui;
 	viewer.launch();
 }
 
 
 /*
- * Configures the ICP-section of the UI
+ * Configures the ICP-section of the UI and hooks up callbacks
  */
 
 bool setup_icp_ui(igl::viewer::Viewer& viewer) {
 	// Add new group
 	viewer.ngui->addGroup("ICP");
-
-	viewer.ngui->addVariable("Iterations", iterations)->setSpinnable(true);
 	
 	viewer.ngui->addVariable("Select model", selected_mesh, true)
-	->setItems({"Moon", "Bunny"});
+	->setItems({"Moon", "Bunny", "Diamond"});
 	
-	// Add a button
-	viewer.ngui->addButton("Align", icp_align);
-	viewer.ngui->addButton("Reset", reload_mesh);
+	// Add buttons and callbacks
+	viewer.ngui->addButton("Align", perform_icp);
+	viewer.ngui->addButton("Reset", load_mesh);
+
+	
+	nanogui::Window *window = new nanogui::Window(viewer.screen, "Progress");
+	window->setPosition(Eigen::Vector2i(125, 100));
+	
+	nanogui::ProgressBar *mProgress;
+	mProgress = new nanogui::ProgressBar(window);
+	mProgress->setValue(0.5);
 	
 	// call to generate menu
 	viewer.screen->performLayout();
 	return false;
 }
 
+void perform_icp() {
+	
+	// align the meshes
+	solver.icp_align();
+	
+	// show the aligned meshes in the viewer
+	set_mesh(model_verts, model_faces, solver.data_verts, data_faces);
+	
+}
+
 /*
  * Load the selected meshes from file and add them to the viewer
  */
 
-void reload_mesh() {
+void load_mesh() {
 	std::string model_name;
 	std::string target_name;
 	
@@ -256,29 +126,45 @@ void reload_mesh() {
 		case bunny_scan:
 			model_name = "bun000.obj";
 			target_name = "bun315.obj";
+			break;
+		case diamond:
+			//model_name = "diamond_10yrot.obj";
+			model_name = "diamond_transformed.obj";
+			target_name = "diamond.obj";
+			break;
 		default:
 			break;
 	}
 	
-	// Load obj-files
+	// load obj-files
 	igl::readOBJ(MESH_DIRECTORY + target_name, model_verts, model_faces);
 	igl::readOBJ(MESH_DIRECTORY + model_name, data_verts, data_faces);
 	
-	Mesh concat_mesh = concat_meshes(model_verts, model_faces, data_verts, data_faces);
+	// reset the solver-meshes
+	solver.data_verts = data_verts;
+	solver.model_verts = model_verts;
+	
+	// update the viewed mesh
+	set_mesh(model_verts, model_faces, data_verts, data_faces);
+}
+
+void set_mesh(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
+			  Eigen::MatrixXd VB, Eigen::MatrixXi FB) {
+	
+	Mesh concat_mesh = concat_meshes(VA, FA, VB, FB);
 	
 	
 	viewer.data.clear();
 	viewer.data.set_mesh(concat_mesh.first, concat_mesh.second);
 	viewer.core.align_camera_center(concat_mesh.first, concat_mesh.second);
 	
-
+	
 	// blue color for faces of first mesh, orange for second
 	Eigen::MatrixXd C(concat_mesh.second.rows(), 3);
 	C << Eigen::RowVector3d(0.2,0.3,0.8).replicate(model_faces.rows(),1),
-		 Eigen::RowVector3d(1.0,0.7,0.2).replicate(data_faces.rows(),1);
+	Eigen::RowVector3d(1.0,0.7,0.2).replicate(data_faces.rows(),1);
 	
 	viewer.data.set_colors(C);
-	
 }
 
 Mesh concat_meshes(Eigen::MatrixXd VA, Eigen::MatrixXi FA,

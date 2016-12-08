@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "86CC3149AEE923A25CD36E1A3B2C3F89E519265E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F91D28A7E95E8F0399C74826E40B332B63E48E1C" : 0,
+    "86CC3149AEE923A25CD36E1A3B2C3F89E519265E" : 0,
+    "5195353D03407327F1B41596EE36D2CFD1D6D5E1" : 0,
+    "5CC3662DE7B154BFBD52EC7DD2FAEF03F2CD148F" : 0,
+    "D41287FAF4BF047D393D5273E2838D7445D5A0D7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EDDDA485-6024-49FD-8481-6299064DE2B7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F91D28A7E95E8F0399C74826E40B332B63E48E1C" : "..\/..\/libigl\/external\/nanogui\/ext\/glfw",
+    "86CC3149AEE923A25CD36E1A3B2C3F89E519265E" : "ICP_Project\/",
+    "5195353D03407327F1B41596EE36D2CFD1D6D5E1" : "..\/..\/libigl",
+    "5CC3662DE7B154BFBD52EC7DD2FAEF03F2CD148F" : "..\/..\/libigl\/external\/nanogui\/ext\/nanovg",
+    "D41287FAF4BF047D393D5273E2838D7445D5A0D7" : "..\/..\/libigl\/external\/nanogui"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "icp_project",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "build\/icp_project.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/libigl\/libigl.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5195353D03407327F1B41596EE36D2CFD1D6D5E1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wjakob\/nanovg",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5CC3662DE7B154BFBD52EC7DD2FAEF03F2CD148F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gudbrandtandberg\/ICP_Project",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "86CC3149AEE923A25CD36E1A3B2C3F89E519265E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/libigl\/nanogui.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D41287FAF4BF047D393D5273E2838D7445D5A0D7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wjakob\/glfw",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F91D28A7E95E8F0399C74826E40B332B63E48E1C"
+    }
+  ]
+}

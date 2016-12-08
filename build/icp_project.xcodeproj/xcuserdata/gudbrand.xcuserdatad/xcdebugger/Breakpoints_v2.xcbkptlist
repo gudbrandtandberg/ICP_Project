@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502763870.713933"
+            timestampString = "502851269.883236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "setup_icp_ui(igl::viewer::Viewer&amp; viewer)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502763724.269286"
+            timestampString = "502851269.883236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "icp_align()"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "setup_icp_ui(igl::viewer::Viewer&amp; viewer)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,14 +41,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "main.cpp"
-            timestampString = "502763870.713933"
+            filePath = "ICP_Solver.hpp"
+            timestampString = "502848503.735965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
-            landmarkType = "7">
+            startingLineNumber = "16"
+            endingLineNumber = "16">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,12 +56,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "main.cpp"
-            timestampString = "502763870.713933"
+            timestampString = "502851269.883236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "main(int argc, char *argv[])"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,14 +71,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "main.cpp"
-            timestampString = "502763870.713933"
+            filePath = "ICP_Solver.cpp"
+            timestampString = "502851534.696434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
-            landmarkType = "7">
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "ICP_Solver::icp_align()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,46 +87,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "main.cpp"
-            timestampString = "502763870.713933"
+            filePath = "ICP_Solver.cpp"
+            timestampString = "502851534.696434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "compute_closest_points(Eigen::MatrixXd &amp;data_vertices, kd_tree_t &amp;model_tree, std::vector&lt;int&gt; &amp;point_correspondences)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "compute_closest_points(Eigen::Matrix&lt;double, -1, -1, 0, -1, -1&gt;&amp;, nanoflann::KDTreeEigenMatrixAdaptor&lt;Eigen::Matrix&lt;double, -1, -1, 0, -1, -1&gt;, -1, nanoflann::metric_L2&gt;&amp;, std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;)"
-                  moduleName = "icp_project_bin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gudbrand/Documents/C++/ICP_Project/main.cpp"
-                  timestampString = "502750444.755497"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "701">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "compute_closest_points(Eigen::Matrix&lt;double, -1, -1, 0, -1, -1&gt;&amp;, nanoflann::KDTreeEigenMatrixAdaptor&lt;Eigen::Matrix&lt;double, -1, -1, 0, -1, -1&gt;, -1, nanoflann::metric_L2&gt;&amp;, std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;)"
-                  moduleName = "icp_project_bin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gudbrand/Documents/C++/ICP_Project/main.cpp"
-                  timestampString = "502750444.755852"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "748">
-               </Location>
-            </Locations>
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "ICP_Solver::icp_align()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -137,14 +103,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "main.cpp"
-            timestampString = "502763870.713933"
+            filePath = "ICP_Solver.cpp"
+            timestampString = "502851269.883236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "compute_registration(Eigen::Vector3d &amp;translation, Eigen::Matrix3d &amp;rotation, std::vector&lt;int&gt; pc)"
-            landmarkType = "7">
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "ICP_Solver::icp_align()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -153,14 +119,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "main.cpp"
-            timestampString = "502763870.713933"
+            filePath = "ICP_Solver.cpp"
+            timestampString = "502851534.696434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "compute_registration(Eigen::Vector3d &amp;translation, Eigen::Matrix3d &amp;rotation, std::vector&lt;int&gt; pc)"
-            landmarkType = "7">
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "ICP_Solver::icp_align()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ICP_Solver.cpp"
+            timestampString = "502851534.696434"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "ICP_Solver::icp_align()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

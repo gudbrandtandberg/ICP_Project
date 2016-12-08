@@ -347,4 +347,6 @@ dependencies: /Users/gudbrand/Documents/C++/ICP_Project/main.cpp \
   /Users/gudbrand/libigl/shared/cmake/../../include/igl/normalize_quat.cpp \
   /Users/gudbrand/libigl/shared/cmake/../../include/igl/unproject.h \
   /Users/gudbrand/libigl/shared/cmake/../../include/igl/unproject.cpp \
-  /usr/local/include/nanoflann/nanoflann.hpp
+  /Users/gudbrand/libigl/shared/cmake/../../external/nanogui/include/nanogui/progressbar.h \
+  /usr/local/include/nanoflann/nanoflann.hpp \
+  /Users/gudbrand/Documents/C++/ICP_Project/ICP_Solver.hpp
