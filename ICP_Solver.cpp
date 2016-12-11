@@ -7,150 +7,152 @@
 //
 
 #include "ICP_Solver.hpp"
-#include <iostream>
 
 ICP_Solver::ICP_Solver() { }
 
 ICP_Solver::ICP_Solver(Eigen::MatrixXd d, Eigen::MatrixXd m) :
-data_verts(d), model_verts(m)
-{ }
+data_verts(d), model_verts(m) {
+	iter_counter = 0;
+	error = MAXFLOAT;
+	iteration_has_converged = false;
+}
 
 ICP_Solver& ICP_Solver::operator=(ICP_Solver arg)
 {
 	std::swap(data_verts, arg.data_verts);
 	std::swap(model_verts, arg.model_verts);
+	std::swap(iter_counter, arg.iter_counter);
+	std::swap(error, arg.error);
+	std::swap(iteration_has_converged, arg.iteration_has_converged);
 	
 	return *this;
 }
 
-void ICP_Solver::icp_align() {
+bool ICP_Solver::step(const kd_tree_t *tree) {
 	
-	int iter_counter = 0;
-	
-	std::map<int, int> point_correspondence;
-	Eigen::Vector3d translation, final_translation = Eigen::Vector3d::Zero();
-	Eigen::Matrix3d rotation, final_rotation = Eigen::Matrix3d::Identity();
-	
-	/* Build a kd-tree of the model mesh */
-	kd_tree_t model_tree(3 /*dim*/, model_verts, 10 /* max leaf */ );
-	model_tree.index->buildIndex();
-	double error = MAXFLOAT;
 	size_t N_data = data_verts.rows();
-	double tolerance = 0.01;
 	
-	while (iter_counter < max_it && error >= tolerance) {
+	if (iter_counter < max_it && (std::abs(error-old_error)) >= tolerance) {
 		
-		compute_closest_points(data_verts, model_tree, point_correspondence);
-		
-		//for (int i=0; i<N_data; i++)
-		//	point_correspondence[i] = i;
-		
+		// Generate the downsampled 'weighted' 1-nn point correspondence map
+		compute_closest_points(tree);
+
+		// Compute the optimal transformation of the data
 		translation = Eigen::Vector3d::Zero();
 		rotation = Eigen::Matrix3d::Zero();
 		
-		compute_registration(translation, rotation, point_correspondence);
+		compute_registration(translation, rotation);
 		
-		/* Transform the data mesh */
-		
-		final_rotation = rotation*final_rotation;
-		final_translation += translation;
-		
-		//Eigen::MatrixXd data_COM = data_verts.colwise().sum().replicate(N_data, 1);
-		//data_COM /= data_verts.rows();
-		
+		// Transform the data mesh
 		data_verts = data_verts * rotation.transpose();
 		data_verts = data_verts + translation.transpose().replicate(N_data, 1);
 		
-		/* Save the error */
-		error = compute_rms_error(translation, rotation, point_correspondence);
+		// Store accumulative transformations
+		final_rotation = rotation*final_rotation;
+		final_translation += translation;
 		
-		std::cout << "Iteration: " << iter_counter << ", Error: " << error << std::endl;
+		// Save the error
+		old_error = error;
+		error = compute_rms_error(translation, rotation);
 		
 		iter_counter++;
-	}
-	
-	if (iter_counter == max_it) {
-		std::cout << "Iteration did not converge.." << std::endl;
+		
+	} else if (iter_counter == max_it) {
+		return false;
 	} else {
-		std::cout << "Iteration converged!" << std::endl;
+		iteration_has_converged = true;
+		return false;
 	}
-	
-	std::cout << "Final rotation\n" << final_rotation << std::endl;
-	std::cout << "Final translation\n" << final_translation << std::endl;
-	
-	/*Eigen::EigenSolver<Eigen::Matrix3d> eigen_solver(final_rotation);
-	 std::cout << eigen_solver.eigenvalues() << std::endl;
-	 std::cout << eigen_solver.eigenvectors() << std::endl;*/
-	
-	//igl::writeOBJ(MESH_DIRECTORY + "mesh_aligned.obj", data_verts, data_faces);
-	
+	return true;
 }
 
-void ICP_Solver::compute_closest_points(Eigen::MatrixXd &data_vertices,
-							kd_tree_t &model_tree,
-							std::map<int, int> &point_correspondences) {
+void ICP_Solver::compute_closest_points(const kd_tree_t *model_tree) {
 	
-	/* do a 1-nn search */
+	point_correspondence.clear();
+	
+	// Downsample
+	size_t N_data = data_verts.rows();
+	size_t N_sample = ceil(sampling_quotient * N_data);
+	std::vector<int> sample(N_sample);
+	
+	for (int i=0; i<N_sample; i++) {
+		sample[i] = rand() % N_data;
+	}
+	
+	// Do a 1-nn search
 	const size_t num_results = 1;
-	std::vector<size_t> ret_indices(num_results);
-	std::vector<double> out_dists_sqr(num_results);
+	std::vector<size_t> nn_index(num_results);
+	std::vector<double> nn_distance(num_results);
+	std::vector<double> distances(N_data);
+	nanoflann::KNNResultSet<double> result_set(num_results);
+	double mean = 0;
 	
-	nanoflann::KNNResultSet<double> resultSet(num_results);
-	
-	/* downsample */
-	
-	
-	for (int i=0; i<data_vertices.rows(); i++) {
-		//std::vector<double> query_pt(data_vertices.row(i).data(),
-		//							 data_vertices.row(i).data() + 3);
+	for (int j=0; j<N_sample; j++) {
 		
-		std::vector<double> query_pt = {data_vertices(i, 0),
-			data_vertices(i, 1), data_vertices(i, 2)};
-			
+		// find closest model-point for data-point 'i'
+		int i = sample[j];
 		
-		std::cout << "Query pt: \n" << "(" << query_pt[0] << ", "
-		<< query_pt[1] << ", " << query_pt[2] << ")" << std::endl;
+		std::vector<double> query_pt = {data_verts(i, 0),
+										data_verts(i, 1),
+										data_verts(i, 2)};
 		
-		resultSet.init(&ret_indices[0], &out_dists_sqr[0]);
-		model_tree.index->findNeighbors(resultSet, &query_pt[0],
+		result_set.init(&nn_index[0], &nn_distance[0]);
+		model_tree->index->findNeighbors(result_set, &query_pt[0],
 										nanoflann::SearchParams(10));
 		
-		point_correspondences[i] = ret_indices[0];
+		point_correspondence[i] = nn_index[0];
+		distances[i] = nn_distance[0];
+		mean += nn_distance[0];
 		
-		std::cout << "Closest pt: \n" << model_verts.row(point_correspondences[i]) << std::endl;
+	} mean /= N_sample;
+	
+	// Compute variance and stddev. of the shortest distances
+	double variance = 0;
+	for (int i=0; i<N_sample; i++) {
+		variance += ((distances[sample[i]] - mean)*(distances[sample[i]] - mean));
+	} variance /= N_sample;
+	
+	double std_deviation = sqrt(variance);
+	double rejected = 0;
+	
+	// Reject point-pairs based on threshold distance rule
+	double cmp;
+	for (int i=0; i<N_sample; i++) {
+		cmp = 2.5*std_deviation;
+		if (std::abs(distances[sample[i]] - mean) > cmp) {
+			point_correspondence.erase(sample[i]);
+			rejected++;
+		}
 	}
+	
+	std::cout << "Rejected " << rejected / N_sample
+	<< "% of the sample point-pairs." << std::endl;
 	
 }
 
 void ICP_Solver::compute_registration(Eigen::Vector3d &translation,
-						  Eigen::Matrix3d &rotation,
-						  std::map<int, int> pc) {
+						  Eigen::Matrix3d &rotation) {
 	
 	size_t N_data = data_verts.rows();
 	size_t N_model = model_verts.rows();
+	size_t N_pc = point_correspondence.size();
 	
-	/* Centres-of-mass */
-	Eigen::Vector3d data_COM = Eigen::Vector3d::Zero();
-	Eigen::Vector3d model_COM = Eigen::Vector3d::Zero();
-	
-	for (int i=0; i<N_data; i++) {
-		data_COM += data_verts.row(i);
-	} data_COM /= N_data;
-	
-	for (int i=0; i<N_model; i++) {
-		model_COM += model_verts.row(i);
-	} model_COM /= N_model;
-	
-	/* Construct covariance matrix */
+	// Centres-of-mass
+	Eigen::Vector3d data_COM = data_verts.colwise().sum() / N_data;
+	Eigen::Vector3d model_COM = model_verts.colwise().sum() / N_model;
+
+	// Construct covariance matrix
 	Eigen::Matrix3d covariance_matrix = Eigen::Matrix3d::Zero();
-	for (int i=0; i<N_data; i++) {
-		covariance_matrix += (data_verts.row(i).transpose() * model_verts.row(pc[i]));
-	} covariance_matrix /= N_data;
+	for(std::map<int,int>::iterator it = point_correspondence.begin();
+		it != point_correspondence.end(); ++it) {
+	
+		covariance_matrix += (data_verts.row(it->first).transpose()
+							  * model_verts.row(it->second));
+	
+	} covariance_matrix /= N_pc;
 	covariance_matrix -= (data_COM * model_COM.transpose());
 	
-	//std::cout << covariance_matrix << std::endl;
-	
-	/* Construct Q-matrix */
+	// Construct Q-matrix
 	Eigen::Matrix3d A = covariance_matrix - covariance_matrix.transpose();
 	Eigen::Vector3d delta;
 	delta << A(1, 2), A(2, 0), A(0, 1);
@@ -164,30 +166,30 @@ void ICP_Solver::compute_registration(Eigen::Vector3d &translation,
 	+ covariance_matrix.transpose()
 	- Q_trace * Eigen::MatrixXd::Identity(3,3);
 	
-	//std::cout << "delta: \n" << delta << std::endl;
-	//std::cout << "Q: \n" << Q << std::endl;
-	
+	// Find optimal unit quaternion
 	Eigen::EigenSolver<Eigen::Matrix4d> eigen_solver(Q);
 	Eigen::MatrixXd::Index max_ev_index;
 	eigen_solver.eigenvalues().real().cwiseAbs().maxCoeff(&max_ev_index);
 	Eigen::Vector4d q_optimal = eigen_solver.eigenvectors().real().col(max_ev_index);
 	
+	// Store the computed solution in 'rotation' and 'translation'
 	quaternion_to_matrix(q_optimal, rotation);
-	
 	translation = model_COM - rotation * data_COM;
 	
 }
 
 double ICP_Solver::compute_rms_error(Eigen::Vector3d translation,
-						 Eigen::Matrix3d rotation,
-						 std::map<int, int> pc) {
-	size_t N_data = data_verts.rows();
+						 Eigen::Matrix3d rotation) {
+	
+	size_t N_pc = point_correspondence.size();
+	
 	Eigen::Vector3d diff;
 	double sum = 0;
-	for (int i=0; i<N_data; i++) {
-		diff = model_verts.row(pc[i]).transpose() - rotation*data_verts.row(i).transpose() - translation;
+	for(std::map<int,int>::iterator it = point_correspondence.begin();
+		it != point_correspondence.end(); ++it) {
+		diff = model_verts.row(it->second).transpose() - rotation*data_verts.row(it->first).transpose() - translation;
 		sum += diff.norm();
-	} sum /= N_data;
+	} sum /= N_pc;
 	
 	return sum;
 }

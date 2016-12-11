@@ -4,7 +4,12 @@
 #include <igl/readOBJ.h>
 #include <igl/writeOBJ.h>
 
+#include <nanogui/messagedialog.h>
 #include <nanogui/progressbar.h>
+#include <nanogui/screen.h>
+#include <nanogui/window.h>
+#include <nanogui/layout.h>
+
 #include "/usr/local/include/nanoflann/nanoflann.hpp"
 
 #include <string>
@@ -18,7 +23,8 @@ typedef std::pair<Eigen::MatrixXd, Eigen::MatrixXi> Mesh;
 enum mesh_selection {
 	moon_surface = 0,
 	bunny_scan,
-	diamond
+	diamond,
+	camel
 };
 
 void init_viewer();
@@ -50,8 +56,6 @@ Eigen::MatrixXi model_faces;
 Eigen::MatrixXd data_verts;
 Eigen::MatrixXi data_faces;
 
-/* The ICP solver */
-ICP_Solver solver;
 
 /*
  * Initialize ui and solver and start the mainloop
@@ -60,7 +64,6 @@ ICP_Solver solver;
 int main(int argc, char *argv[])
 {
 	load_mesh();
-	solver = ICP_Solver(data_verts, model_verts);
 	init_viewer();
 }
 
@@ -77,23 +80,16 @@ void init_viewer() {
  */
 
 bool setup_icp_ui(igl::viewer::Viewer& viewer) {
-	// Add new group
+	
 	viewer.ngui->addGroup("ICP");
 	
 	viewer.ngui->addVariable("Select model", selected_mesh, true)
-	->setItems({"Moon", "Bunny", "Diamond"});
+	->setItems({"Moon", "Bunny", "Diamond", "Camel"});
 	
 	// Add buttons and callbacks
 	viewer.ngui->addButton("Align", perform_icp);
 	viewer.ngui->addButton("Reset", load_mesh);
 
-	
-	nanogui::Window *window = new nanogui::Window(viewer.screen, "Progress");
-	window->setPosition(Eigen::Vector2i(125, 100));
-	
-	nanogui::ProgressBar *mProgress;
-	mProgress = new nanogui::ProgressBar(window);
-	mProgress->setValue(0.5);
 	
 	// call to generate menu
 	viewer.screen->performLayout();
@@ -102,11 +98,30 @@ bool setup_icp_ui(igl::viewer::Viewer& viewer) {
 
 void perform_icp() {
 	
-	// align the meshes
-	solver.icp_align();
+	//initialize solver
+	
+	//should not have to construct tree here!!
+	kd_tree_t model_tree(3 /*dim*/, model_verts, 10 /* max leaf */ );
+	model_tree.index->buildIndex();
+	
+	ICP_Solver solver = ICP_Solver(data_verts, model_verts);
+	
+	while (solver.step(&model_tree)) {
+		std::cout << "Iteration: " << solver.iter_counter <<
+		", Error: " << solver.error << std::endl;
+	}
+	
+	if (solver.iter_counter == solver.max_it) {
+		std::cout << "Iteration did not converge.." << std::endl;
+	} else {
+		std::cout << "Iteration converged!" << std::endl;
+	}
 	
 	// show the aligned meshes in the viewer
 	set_mesh(model_verts, model_faces, solver.data_verts, data_faces);
+	
+	std::cout << "Final rotation\n" << solver.final_rotation << std::endl;
+	std::cout << "Final translation\n" << solver.final_translation << std::endl;
 	
 }
 
@@ -120,17 +135,22 @@ void load_mesh() {
 	
 	switch (selected_mesh) {
 		case moon_surface:
-			model_name = "Moon_Terrain_Transformed.obj";
-			target_name = "Moon_Terrain1.obj";
+			model_name = "Moon_Terrain2.obj";
+			target_name = "Moon_Terrain_1z10x.obj";
 			break;
 		case bunny_scan:
-			model_name = "bun000.obj";
+			//model_name = "bun000_new2.obj";
+			model_name = "bun045_init_align_to_315__.obj";
 			target_name = "bun315.obj";
 			break;
 		case diamond:
 			//model_name = "diamond_10yrot.obj";
 			model_name = "diamond_transformed.obj";
 			target_name = "diamond.obj";
+			break;
+		case camel:
+			model_name = "camel.obj";
+			target_name = "noisy_translated_camel.obj";
 			break;
 		default:
 			break;
@@ -139,10 +159,6 @@ void load_mesh() {
 	// load obj-files
 	igl::readOBJ(MESH_DIRECTORY + target_name, model_verts, model_faces);
 	igl::readOBJ(MESH_DIRECTORY + model_name, data_verts, data_faces);
-	
-	// reset the solver-meshes
-	solver.data_verts = data_verts;
-	solver.model_verts = model_verts;
 	
 	// update the viewed mesh
 	set_mesh(model_verts, model_faces, data_verts, data_faces);
