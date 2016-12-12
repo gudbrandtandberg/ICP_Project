@@ -1,42 +1,21 @@
-# libigl example project
+# ICP---Iterated Closest Point---Project
 
-A blank project example showing how to use libigl and cmake. Feel free and
-encouraged to copy or fork this project as a way of starting a new personal
-project using libigl.
+A C++ program for the alignment of two input meshes. 
 
-## See the tutorial first
+The class __ICP_Solver__ contains all the functionality for initializing and 
+executing a variant of the basic [ICP algorithm](http://graphics.stanford.edu/courses/cs164-09-spring/Handouts/paper_icp.pdf).
 
-Then build, run and understand the [libigl
-tutorial](http://libigl.github.io/libigl/tutorial/tutorial.html).
+We use [nanoflann](https://github.com/jlblancoc/nanoflann) for kd-tree implementation, [Eigen](http://eigen.tuxfamily.org/i) for matrices, 
+and [libigl](https://github.com/libigl/libigl) for the main OpenGL interface. 
 
-## Compile
+Example: 
 
-Compile this project using the standard cmake routine:
+```C++
 
-    mkdir build
-    cd build
-    cmake ..
-    make
+ICP_Solver solver = ICP_Solver(data_verts, model_verts);
+solver.perform_icp();
+aligned_mesh = solver.data_verts;
 
-This should find and build the dependencies and create a `example_bin` binary.
+```
 
-## Run
-
-From within the `build` directory just issue:
-
-    ./example_bin
-
-A glfw app should launch displaying a 3D cube.
-
-## Dependencies
-
-The only dependencies are stl, eigen, [libigl](libigl.github.io/libigl/) and
-the dependencies of the `igl::viewer::Viewer` (mandatory: glfw and
-opengl, optional: nanogui and nanovg).
-
-We recommend you to install libigl using git via:
-
-    git clone --recursive https://github.com/libigl/libigl.git
-
-If you have installed libigl at `/path/to/libigl/` then a good place to clone
-this library is `/path/to/libigl-example-project/`.
+![Camel](camel.png)

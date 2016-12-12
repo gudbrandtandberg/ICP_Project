@@ -6,36 +6,48 @@
 //
 //
 
+const int dim = 3;
+const int max_leaf = 10;
+
 #include "ICP_Solver.hpp"
 
-ICP_Solver::ICP_Solver() { }
+ICP_Solver::ICP_Solver() { std::cout << "Initialize with input meshes"; exit(-1); }
 
 ICP_Solver::ICP_Solver(Eigen::MatrixXd d, Eigen::MatrixXd m) :
-data_verts(d), model_verts(m) {
-	iter_counter = 0;
-	error = MAXFLOAT;
-	iteration_has_converged = false;
+	data_verts(d), model_verts(m) {
+	N_data = d.rows();
 }
 
-ICP_Solver& ICP_Solver::operator=(ICP_Solver arg)
-{
-	std::swap(data_verts, arg.data_verts);
-	std::swap(model_verts, arg.model_verts);
-	std::swap(iter_counter, arg.iter_counter);
-	std::swap(error, arg.error);
-	std::swap(iteration_has_converged, arg.iteration_has_converged);
+void ICP_Solver::build_tree() {
 	
-	return *this;
+	model_kd_tree = new kd_tree_t(dim, model_verts, max_leaf);
 }
 
-bool ICP_Solver::step(const kd_tree_t *tree) {
+bool ICP_Solver::perform_icp() {
 	
-	size_t N_data = data_verts.rows();
+	build_tree();
 	
-	if (iter_counter < max_it && (std::abs(error-old_error)) >= tolerance) {
+	while (step()) {
+		std::cout << "Iteration: " << iter_counter <<
+		", Error: " << error << std::endl;
+	}
+	
+	if (iteration_has_converged) {
+		std::cout << "Iteration converged!" << std::endl;
+		return true;
+	} else {
+		std::cout << "Iteration did not converge.." << std::endl;
+		return false;
+	}
+}
+
+bool ICP_Solver::step() {
+	double error_diff = std::abs(error-old_error);
+
+	if ((iter_counter < max_it) && !(error_diff < tolerance)) {
 		
-		// Generate the downsampled 'weighted' 1-nn point correspondence map
-		compute_closest_points(tree);
+		// Generate the downsampled truncated 1-nn point correspondence map
+		compute_closest_points();
 
 		// Compute the optimal transformation of the data
 		translation = Eigen::Vector3d::Zero();
@@ -57,21 +69,21 @@ bool ICP_Solver::step(const kd_tree_t *tree) {
 		
 		iter_counter++;
 		
-	} else if (iter_counter == max_it) {
-		return false;
-	} else {
+	} else if (error_diff < tolerance) {
 		iteration_has_converged = true;
 		return false;
+	} else if (iter_counter == max_it) {
+		return false;
 	}
+	
 	return true;
 }
 
-void ICP_Solver::compute_closest_points(const kd_tree_t *model_tree) {
+void ICP_Solver::compute_closest_points() {
 	
 	point_correspondence.clear();
 	
 	// Downsample
-	size_t N_data = data_verts.rows();
 	size_t N_sample = ceil(sampling_quotient * N_data);
 	std::vector<int> sample(N_sample);
 	
@@ -97,7 +109,7 @@ void ICP_Solver::compute_closest_points(const kd_tree_t *model_tree) {
 										data_verts(i, 2)};
 		
 		result_set.init(&nn_index[0], &nn_distance[0]);
-		model_tree->index->findNeighbors(result_set, &query_pt[0],
+		model_kd_tree->index->findNeighbors(result_set, &query_pt[0],
 										nanoflann::SearchParams(10));
 		
 		point_correspondence[i] = nn_index[0];
@@ -106,7 +118,7 @@ void ICP_Solver::compute_closest_points(const kd_tree_t *model_tree) {
 		
 	} mean /= N_sample;
 	
-	// Compute variance and stddev. of the shortest distances
+	// Compute variance and std dev. of the shortest distances
 	double variance = 0;
 	for (int i=0; i<N_sample; i++) {
 		variance += ((distances[sample[i]] - mean)*(distances[sample[i]] - mean));
@@ -118,7 +130,7 @@ void ICP_Solver::compute_closest_points(const kd_tree_t *model_tree) {
 	// Reject point-pairs based on threshold distance rule
 	double cmp;
 	for (int i=0; i<N_sample; i++) {
-		cmp = 2.5*std_deviation;
+		cmp = 1.5*std_deviation;
 		if (std::abs(distances[sample[i]] - mean) > cmp) {
 			point_correspondence.erase(sample[i]);
 			rejected++;

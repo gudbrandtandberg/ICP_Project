@@ -4,11 +4,9 @@
 #include <igl/readOBJ.h>
 #include <igl/writeOBJ.h>
 
-#include <nanogui/messagedialog.h>
-#include <nanogui/progressbar.h>
+
 #include <nanogui/screen.h>
 #include <nanogui/window.h>
-#include <nanogui/layout.h>
 
 #include "/usr/local/include/nanoflann/nanoflann.hpp"
 
@@ -24,7 +22,8 @@ enum mesh_selection {
 	moon_surface = 0,
 	bunny_scan,
 	diamond,
-	camel
+	camel,
+	camel2
 };
 
 void init_viewer();
@@ -35,11 +34,11 @@ bool setup_icp_ui(igl::viewer::Viewer& viewer);
 
 void perform_icp();
 
-Mesh concat_meshes(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
-				   Eigen::MatrixXd VB, Eigen::MatrixXi FB);
-
 void set_mesh(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
 			  Eigen::MatrixXd VB, Eigen::MatrixXi FB);
+
+Mesh concat_meshes(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
+				   Eigen::MatrixXd VB, Eigen::MatrixXi FB);
 
 
 /* currently selected mesh */
@@ -58,7 +57,7 @@ Eigen::MatrixXi data_faces;
 
 
 /*
- * Initialize ui and solver and start the mainloop
+ * Initialize ui and and start the mainloop
  */
 
 int main(int argc, char *argv[])
@@ -84,7 +83,7 @@ bool setup_icp_ui(igl::viewer::Viewer& viewer) {
 	viewer.ngui->addGroup("ICP");
 	
 	viewer.ngui->addVariable("Select model", selected_mesh, true)
-	->setItems({"Moon", "Bunny", "Diamond", "Camel"});
+	->setItems({"Moon", "Bunny", "Diamond", "Camel", "Camel2"});
 	
 	// Add buttons and callbacks
 	viewer.ngui->addButton("Align", perform_icp);
@@ -96,26 +95,15 @@ bool setup_icp_ui(igl::viewer::Viewer& viewer) {
 	return false;
 }
 
+/*
+ * Callback for when the 'align' button is clicked
+ * Uses an ICP_Solver object to align the meshes
+ */
+
 void perform_icp() {
 	
-	//initialize solver
-	
-	//should not have to construct tree here!!
-	kd_tree_t model_tree(3 /*dim*/, model_verts, 10 /* max leaf */ );
-	model_tree.index->buildIndex();
-	
 	ICP_Solver solver = ICP_Solver(data_verts, model_verts);
-	
-	while (solver.step(&model_tree)) {
-		std::cout << "Iteration: " << solver.iter_counter <<
-		", Error: " << solver.error << std::endl;
-	}
-	
-	if (solver.iter_counter == solver.max_it) {
-		std::cout << "Iteration did not converge.." << std::endl;
-	} else {
-		std::cout << "Iteration converged!" << std::endl;
-	}
+	solver.perform_icp();
 	
 	// show the aligned meshes in the viewer
 	set_mesh(model_verts, model_faces, solver.data_verts, data_faces);
@@ -149,8 +137,12 @@ void load_mesh() {
 			target_name = "diamond.obj";
 			break;
 		case camel:
-			model_name = "camel.obj";
-			target_name = "noisy_translated_camel.obj";
+			model_name = "noisy_translated_camel.obj";
+			target_name = "camel.obj";
+			break;
+		case camel2:
+			target_name = "camel.obj";
+			model_name = "camel_headless.obj";
 			break;
 		default:
 			break;
@@ -168,7 +160,6 @@ void set_mesh(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
 			  Eigen::MatrixXd VB, Eigen::MatrixXi FB) {
 	
 	Mesh concat_mesh = concat_meshes(VA, FA, VB, FB);
-	
 	
 	viewer.data.clear();
 	viewer.data.set_mesh(concat_mesh.first, concat_mesh.second);
