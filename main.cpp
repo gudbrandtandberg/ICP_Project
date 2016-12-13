@@ -34,8 +34,7 @@ bool setup_icp_ui(igl::viewer::Viewer& viewer);
 
 void perform_icp();
 
-void set_mesh(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
-			  Eigen::MatrixXd VB, Eigen::MatrixXi FB);
+void set_mesh();
 
 Mesh concat_meshes(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
 				   Eigen::MatrixXd VB, Eigen::MatrixXi FB);
@@ -55,6 +54,8 @@ Eigen::MatrixXi model_faces;
 Eigen::MatrixXd data_verts;
 Eigen::MatrixXi data_faces;
 
+/* The concatinated mesh for viewing */
+Mesh concat_mesh;
 
 /*
  * Initialize ui and and start the mainloop
@@ -106,7 +107,8 @@ void perform_icp() {
 	solver.perform_icp();
 	
 	// show the aligned meshes in the viewer
-	set_mesh(model_verts, model_faces, solver.data_verts, data_faces);
+	concat_mesh.first.block(0, 0, data_verts.rows(), 3) = solver.data_verts;
+	set_mesh();
 	
 	std::cout << "Final rotation\n" << solver.final_rotation << std::endl;
 	std::cout << "Final translation\n" << solver.final_translation << std::endl;
@@ -153,13 +155,12 @@ void load_mesh() {
 	igl::readOBJ(MESH_DIRECTORY + model_name, data_verts, data_faces);
 	
 	// update the viewed mesh
-	set_mesh(model_verts, model_faces, data_verts, data_faces);
+	concat_mesh = concat_meshes(data_verts, data_faces, model_verts, model_faces);
+	set_mesh();
+	
 }
 
-void set_mesh(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
-			  Eigen::MatrixXd VB, Eigen::MatrixXi FB) {
-	
-	Mesh concat_mesh = concat_meshes(VA, FA, VB, FB);
+void set_mesh() {
 	
 	viewer.data.clear();
 	viewer.data.set_mesh(concat_mesh.first, concat_mesh.second);
@@ -168,8 +169,8 @@ void set_mesh(Eigen::MatrixXd VA, Eigen::MatrixXi FA,
 	
 	// blue color for faces of first mesh, orange for second
 	Eigen::MatrixXd C(concat_mesh.second.rows(), 3);
-	C << Eigen::RowVector3d(0.2,0.3,0.8).replicate(model_faces.rows(),1),
-	Eigen::RowVector3d(1.0,0.7,0.2).replicate(data_faces.rows(),1);
+	C << Eigen::RowVector3d(1.0,0.7,0.2).replicate(data_faces.rows(),1),
+	Eigen::RowVector3d(0.2,0.3,0.8).replicate(model_faces.rows(),1);
 	
 	viewer.data.set_colors(C);
 }
