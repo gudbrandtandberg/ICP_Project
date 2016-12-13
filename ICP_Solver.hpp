@@ -24,6 +24,7 @@ public:
 	Eigen::MatrixXd data_verts; size_t N_data;
 	Eigen::MatrixXd model_verts;
 	std::map<int, int> point_correspondence;
+	std::map<int, double> weights;
 	
 	Eigen::Vector3d translation, final_translation = Eigen::Vector3d::Zero();
 	Eigen::Matrix3d rotation, final_rotation = Eigen::Matrix3d::Identity();
@@ -37,7 +38,7 @@ private:
 	int iter_counter = 0;
 	const size_t max_it = 50;
 	const double tolerance = 0.000001;
-	const float sampling_quotient = 0.5;
+	const float sampling_quotient = 1.0;
 	
 public:
 	ICP_Solver();

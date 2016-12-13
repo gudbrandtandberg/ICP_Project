@@ -82,13 +82,18 @@ bool ICP_Solver::step() {
 void ICP_Solver::compute_closest_points() {
 	
 	point_correspondence.clear();
+	weights.clear();
 	
 	// Downsample
 	size_t N_sample = ceil(sampling_quotient * N_data);
 	std::vector<int> sample(N_sample);
 	
 	for (int i=0; i<N_sample; i++) {
-		sample[i] = rand() % N_data;
+		if (sampling_quotient == 1.0) {
+			sample[i] = i;
+		} else {
+			sample[i] = rand() % N_data;
+		}
 	}
 	
 	// Do a 1-nn search
@@ -100,7 +105,6 @@ void ICP_Solver::compute_closest_points() {
 	double mean = 0;
 	
 	for (int j=0; j<N_sample; j++) {
-		
 		// find closest model-point for data-point 'i'
 		int i = sample[j];
 		
@@ -118,7 +122,7 @@ void ICP_Solver::compute_closest_points() {
 		
 	} mean /= N_sample;
 	
-	// Compute variance and std dev. of the shortest distances
+	// Compute variance and std dev. of the distances
 	double variance = 0;
 	for (int i=0; i<N_sample; i++) {
 		variance += ((distances[sample[i]] - mean)*(distances[sample[i]] - mean));
@@ -140,6 +144,17 @@ void ICP_Solver::compute_closest_points() {
 	std::cout << "Rejected " << rejected / N_sample
 	<< "% of the sample point-pairs." << std::endl;
 	
+	// Find max distance between points
+	std::vector<double>::iterator max_dist_it;
+	max_dist_it = std::max_element(distances.begin(), distances.end());
+
+	// Define weights for registration step
+	for (std::map<int, int>::iterator it = point_correspondence.begin();
+		 it != point_correspondence.end(); ++it) {
+		
+		weights[it->first] = 1 - (distances[it->first] / *max_dist_it);
+		
+	}
 }
 
 void ICP_Solver::compute_registration(Eigen::Vector3d &translation,
@@ -157,8 +172,8 @@ void ICP_Solver::compute_registration(Eigen::Vector3d &translation,
 	Eigen::Matrix3d covariance_matrix = Eigen::Matrix3d::Zero();
 	for(std::map<int,int>::iterator it = point_correspondence.begin();
 		it != point_correspondence.end(); ++it) {
-	
-		covariance_matrix += (data_verts.row(it->first).transpose()
+		int index = it->first;
+		covariance_matrix += weights[index]*(data_verts.row(index).transpose()
 							  * model_verts.row(it->second));
 	
 	} covariance_matrix /= N_pc;
