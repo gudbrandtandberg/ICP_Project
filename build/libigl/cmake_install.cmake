@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gudbrand/libigl/shared/cmake
+# Install script for directory: /Users/gudbrand/Developer/libigl/shared/cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

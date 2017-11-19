@@ -130,8 +130,10 @@ void load_mesh() {
 			break;
 		case bunny_scan:
 			//model_name = "bun000_new2.obj";
-			model_name = "bun045_init_align_to_315__.obj";
-			target_name = "bun315.obj";
+			//model_name = "bun045_init_align_to_315__.obj";
+			//target_name = "bun315.obj";
+			model_name = "checkerboard1.obj";
+			target_name = "checkerboard2.obj";
 			break;
 		case diamond:
 			//model_name = "diamond_10yrot.obj";

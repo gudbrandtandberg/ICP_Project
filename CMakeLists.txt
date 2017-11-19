@@ -55,7 +55,7 @@ endif()
 # Adding libigl: choose the path to your local copy libigl 
 # This is going to compile everything you requested 
 #message(FATAL_ERROR "${PROJECT_SOURCE_DIR}/../libigl/cmake")
-add_subdirectory("/Users/gudbrand/libigl/include/../shared/cmake" "libigl")
+add_subdirectory("/Users/gudbrand/Developer/libigl/include/../shared/cmake" "libigl")
 
 # libigl information 
 message("libigl includes: ${LIBIGL_INCLUDE_DIRS}")
